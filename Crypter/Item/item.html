@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item</title>
+    <link rel="stylesheet" href="./item.css">
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="container">
+            <div class="header">
+
+                <div class="header-left">
+                    <a href="../Home/home.html"><img src="../images/logo.png" alt="" class="logo"></a>
+
+                    <div class="line"></div>
+                    <a href="#" class="header-left__link">Discover</a>
+                    <a href="#" class="header-left__link link__weight">How it work</a>
+                </div>
+
+                <button class="i-none" id="notification"><i>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 18.0233C21 18.5113 20.6043 18.907 20.1163 18.907H3.88372C3.39565 18.907 3 18.5113 3 18.0233C3 17.5352 3.39566 17.1395 3.88372 17.1395H3.9V10.9809C3.9 6.57288 7.527 3 12 3C16.473 3 20.1 6.57288 20.1 10.9809V17.1395H20.1163C20.6043 17.1395 21 17.5352 21 18.0233ZM5.7 17.1395H18.3V10.9809C18.3 7.5494 15.4794 4.76744 12 4.76744C8.5206 4.76744 5.7 7.5494 5.7 10.9809V17.1395ZM9.97604 20.7558C9.73121 20.2608 10.1977 19.7907 10.75 19.7907H13.25C13.8023 19.7907 14.2688 20.2608 14.024 20.7558C13.9155 20.9751 13.7699 21.1773 13.591 21.3529C13.169 21.7672 12.5967 22 12 22C11.4033 22 10.831 21.7672 10.409 21.3529C10.2301 21.1773 10.0845 20.9751 9.97604 20.7558Z"
+                                fill="#777E91" />
+                        </svg>
+                    </i></button>
+
+                <button class="hamburger">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.66634 10.667C5.92996 10.667 5.33301 11.2639 5.33301 12.0003C5.33301 12.7367 5.92996 13.3337 6.66634 13.3337H25.333C26.0694 13.3337 26.6663 12.7367 26.6663 12.0003C26.6663 11.2639 26.0694 10.667 25.333 10.667H6.66634Z"
+                            fill="#777E91" />
+                        <path
+                            d="M6.66634 18.667C5.92996 18.667 5.33301 19.2639 5.33301 20.0003C5.33301 20.7367 5.92996 21.3337 6.66634 21.3337H25.333C26.0694 21.3337 26.6663 20.7367 26.6663 20.0003C26.6663 19.2639 26.0694 18.667 25.333 18.667H6.66634Z"
+                            fill="#777E91" />
+                    </svg>
+                </button>
+
+                <div class="header-right nav-responsive">
+                    <button class="close">X</button>
+                    <input type="text" name="" id="search" placeholder="Search">
+                    <i class="i__search">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="7" stroke="#CCD2E3" stroke-width="2" />
+                            <path d="M20 20L17 17" stroke="#CCD2E3" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </i>
+                    <i class="i__notification" id="notification">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 18.0233C21 18.5113 20.6043 18.907 20.1163 18.907H3.88372C3.39565 18.907 3 18.5113 3 18.0233C3 17.5352 3.39566 17.1395 3.88372 17.1395H3.9V10.9809C3.9 6.57288 7.527 3 12 3C16.473 3 20.1 6.57288 20.1 10.9809V17.1395H20.1163C20.6043 17.1395 21 17.5352 21 18.0233ZM5.7 17.1395H18.3V10.9809C18.3 7.5494 15.4794 4.76744 12 4.76744C8.5206 4.76744 5.7 7.5494 5.7 10.9809V17.1395ZM9.97604 20.7558C9.73121 20.2608 10.1977 19.7907 10.75 19.7907H13.25C13.8023 19.7907 14.2688 20.2608 14.024 20.7558C13.9155 20.9751 13.7699 21.1773 13.591 21.3529C13.169 21.7672 12.5967 22 12 22C11.4033 22 10.831 21.7672 10.409 21.3529C10.2301 21.1773 10.0845 20.9751 9.97604 20.7558Z"
+                                fill="#777E91" />
+                        </svg>
+                    </i>
+                    <a href="../Upload/upload.html" class="header-right__btn">Upload</a>
+                    <button class="header-right__btn btn__tranparent" id="profile">Connect Wallet</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="main-content flex">
+                <div class="content-left">
+                    <p class="main__tag">Art</p>
+                    <p class="main__tag tag__main">unlockable</p>
+                    <img src="../images/main__img.png" alt="" class="main__img">
+                </div>
+                <div class="content-right">
+                    <h1 class="main__title">The amazing art</h1>
+                    <div class="flex tags">
+                        <button class="tag">2.5 ETH</button>
+                        <button class="tag color__gray">$4.429.87</button>
+                        <button class="tag transparent">10 in stock</button>
+                    </div>
+
+                    <p class="main__text">This NFT Card will give you Access to Special Airdrops. To learn more about
+                        UI8 please visit <a href="">https://ui8.net</a> </p>
+
+                    <div class="buttons-flex">
+                        <button class="discover__btn active">Info</button>
+                        <button class="discover__btn">Owners</button>
+                        <button class="discover__btn">History</button>
+                        <button class="discover__btn">Bids</button>
+                    </div>
+
+                    <div class="user-card">
+                        <img src="../images/02.png" alt="" class="user__img">
+                        <div class="user-text">
+                            <h3 class="user__title">Owner</h3>
+                            <h3 class="user__text">Raquel Will</h3>
+                        </div>
+                    </div>
+
+                    <div class="user-card">
+                        <img src="../images/02.png" alt="" class="user__img">
+                        <div class="user-text">
+                            <h3 class="user__title">Owner</h3>
+                            <h3 class="user__text">Raquel Will</h3>
+                        </div>
+                    </div>
+
+                    <div class="purchase-card">
+                        <div class="user-card user">
+                            <img src="../images/02.png" alt="" class="user__img">
+                            <div class="user-text">
+                                <h3 class="user__title">Highest bid by <span>Kohaku Tora</span></h3>
+                                <h3 class="user__text">1.46 ETH <span>$2,764.89</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <button class="btn btn__color__blue" onclick="purchase()">Purchase now</button>
+                            <button class="btn" onclick="place()">Place a bid</button>
+                        </div>
+
+                        <h3 class="user__title">Service fee <span>1.5%</span> 2.563 ETH $4,540.62</h3>
+                    </div>
+                </div>
+                <div class="aside flex">
+                    <button class="aside__btn backgorund__black"><svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                                fill="#777E91" />
+                        </svg>
+                    </button>
+                    <button class="aside__btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.99858 10.0399C9.02798 10.5914 8.60474 11.0623 8.05324 11.0917C7.30055 11.1318 6.7044 11.1809 6.23854 11.23C5.61292 11.296 5.23278 11.6803 5.16959 12.2331C5.07886 13.0267 5 14.2278 5 16C5 17.7723 5.07886 18.9733 5.16959 19.7669C5.23289 20.3207 5.61207 20.7039 6.23675 20.7698C7.33078 20.8853 9.13925 21 12 21C14.8608 21 16.6692 20.8853 17.7632 20.7698C18.3879 20.7039 18.7671 20.3207 18.8304 19.7669C18.9211 18.9733 19 17.7723 19 16C19 14.2278 18.9211 13.0267 18.8304 12.2331C18.7672 11.6803 18.3871 11.296 17.7615 11.23C17.2956 11.1809 16.6995 11.1318 15.9468 11.0917C15.3953 11.0623 14.972 10.5914 15.0014 10.0399C15.0308 9.48837 15.5017 9.06512 16.0532 9.09452C16.8361 9.13626 17.4669 9.18787 17.9712 9.24106C19.4556 9.39761 20.6397 10.4507 20.8175 12.0059C20.9188 12.8923 21 14.1715 21 16C21 17.8285 20.9188 19.1077 20.8175 19.9941C20.6398 21.5484 19.4585 22.602 17.9732 22.7588C16.7919 22.8834 14.9108 23 12 23C9.08922 23 7.20806 22.8834 6.02684 22.7588C4.54151 22.602 3.36021 21.5484 3.18253 19.9941C3.0812 19.1077 3 17.8285 3 16C3 14.1715 3.0812 12.8923 3.18253 12.0059C3.36031 10.4507 4.54436 9.39761 6.02877 9.24106C6.53306 9.18787 7.16393 9.13626 7.94676 9.09452C8.49827 9.06512 8.96918 9.48837 8.99858 10.0399Z"
+                                fill="#777E91" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.20711 6.20711C8.81658 6.59763 8.18342 6.59763 7.79289 6.20711C7.40237 5.81658 7.40237 5.18342 7.79289 4.79289L11.2929 1.29289C11.6834 0.902369 12.3166 0.902369 12.7071 1.29289L16.2071 4.79289C16.5976 5.18342 16.5976 5.81658 16.2071 6.20711C15.8166 6.59763 15.1834 6.59763 14.7929 6.20711L13 4.41421V14C13 14.5523 12.5523 15 12 15C11.4477 15 11 14.5523 11 14V4.41421L9.20711 6.20711Z"
+                                fill="#777E91" />
+                        </svg>
+                    </button>
+                    <button class="aside__btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 4.80957C10.8321 3.6888 9.24649 3 7.5 3C3.91015 3 1 5.91015 1 9.5C1 15.8683 7.97034 19.385 10.8138 20.5547C11.5796 20.8697 12.4204 20.8697 13.1862 20.5547C16.0297 19.385 23 15.8682 23 9.5C23 5.91015 20.0899 3 16.5 3C14.7535 3 13.1679 3.6888 12 4.80957Z"
+                                fill="#EF466F" />
+                        </svg>
+                    </button>
+                    <button class="aside__btn" onclick="openModal()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"
+                                fill="#777E91" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="menu menu-none">
+                    <button class="menu__btn flex"><i class="i__menu">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.99935 16.6677C13.6812 16.6677 16.666 13.6829 16.666 10.001C16.666 6.3191 13.6812 3.33433 9.99935 3.33433C6.31745 3.33433 3.33268 6.3191 3.33268 10.001C3.33268 13.6829 6.31745 16.6677 9.99935 16.6677ZM9.99935 18.3343C14.6017 18.3343 18.3327 14.6034 18.3327 10.001C18.3327 5.39862 14.6017 1.66766 9.99935 1.66766C5.39698 1.66766 1.66602 5.39862 1.66602 10.001C1.66602 14.6034 5.39698 18.3343 9.99935 18.3343Z"
+                                    fill="#777E91" />
+                                <path
+                                    d="M9.16602 5.83434C9.16602 5.3741 9.53911 5.00101 9.99935 5.00101C10.4596 5.00101 10.8327 5.3741 10.8327 5.83434C12.2134 5.83434 13.3327 6.95363 13.3327 8.33434C13.3327 8.79458 12.9596 9.16767 12.4993 9.16767C12.0391 9.16767 11.666 8.79458 11.666 8.33434C11.666 7.8741 11.2929 7.50101 10.8327 7.50101H8.9522C8.61005 7.50101 8.33268 7.77837 8.33268 8.12052C8.33268 8.38718 8.50332 8.62392 8.75629 8.70824L11.7695 9.71263C12.703 10.0238 13.3327 10.8975 13.3327 11.8815C13.3327 13.1441 12.3091 14.1677 11.0465 14.1677H10.8327C10.8327 14.6279 10.4596 15.001 9.99935 15.001C9.53911 15.001 9.16602 14.6279 9.16602 14.1677C7.7853 14.1677 6.66602 13.0484 6.66602 11.6677C6.66602 11.2074 7.03911 10.8343 7.49935 10.8343C7.95959 10.8343 8.33268 11.2074 8.33268 11.6677C8.33268 12.1279 8.70578 12.501 9.16602 12.501H11.0465C11.3886 12.501 11.666 12.2236 11.666 11.8815C11.666 11.6148 11.4954 11.3781 11.2424 11.2938L8.22924 10.2894C7.2957 9.9782 6.66602 9.10456 6.66602 8.12052C6.66602 6.8579 7.68957 5.83434 8.9522 5.83434H9.16602Z"
+                                    fill="#777E91" />
+                            </svg>
+
+                        </i>
+                        Change price
+                    </button>
+                    <button class="menu__btn flex"><i class="i__menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 3.33433C8.37249 3.33433 6.87282 3.4685 5.6691 3.62748C4.58579 3.77055 3.7689 4.58743 3.62583 5.67075C3.46685 6.87447 3.33268 8.37414 3.33268 10.001C3.33268 11.6279 3.46685 13.1275 3.62583 14.3312C3.7689 15.4146 4.58579 16.2314 5.6691 16.3745C6.87282 16.5335 8.37249 16.6677 9.99935 16.6677C11.6262 16.6677 13.1259 16.5335 14.3296 16.3745C15.4129 16.2314 16.2298 15.4146 16.3729 14.3312C16.5318 13.1275 16.666 11.6279 16.666 10.001C16.666 8.37414 16.5318 6.87447 16.3729 5.67075C16.2298 4.58743 15.4129 3.77055 14.3296 3.62748C13.1259 3.4685 11.6262 3.33433 9.99935 3.33433ZM5.45088 1.97516C3.62022 2.21693 2.21529 3.62187 1.97351 5.45253C1.80729 6.71107 1.66602 8.28539 1.66602 10.001C1.66602 11.7166 1.80729 13.2909 1.97351 14.5495C2.21529 16.3801 3.62022 17.7851 5.45088 18.0268C6.70942 18.1931 8.28374 18.3343 9.99935 18.3343C11.715 18.3343 13.2893 18.1931 14.5478 18.0268C16.3785 17.7851 17.7834 16.3801 18.0252 14.5495C18.1914 13.2909 18.3327 11.7166 18.3327 10.001C18.3327 8.28539 18.1914 6.71107 18.0252 5.45253C17.7834 3.62187 16.3785 2.21693 14.5478 1.97516C13.2893 1.80894 11.715 1.66766 9.99935 1.66766C8.28374 1.66766 6.70942 1.80894 5.45088 1.97516Z" fill="#777E91"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16075 6.49508C7.83531 6.82052 7.83531 7.34816 8.16075 7.6736L10.4882 10.001L8.16075 12.3284C7.83531 12.6539 7.83531 13.1815 8.16075 13.5069C8.48618 13.8324 9.01382 13.8324 9.33926 13.5069L12.2559 10.5903C12.5814 10.2648 12.5814 9.73719 12.2559 9.41175L9.33926 6.49508C9.01382 6.16965 8.48618 6.16965 8.16075 6.49508Z" fill="#777E91"/>
+                            </svg>                          
+                        </i>
+                        Transfer token
+                    </button>
+                    <button class="menu__btn flex"><i class="i__menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 16.6677C13.6812 16.6677 16.666 13.6829 16.666 10.001C16.666 6.3191 13.6812 3.33433 9.99935 3.33433C6.31745 3.33433 3.33268 6.3191 3.33268 10.001C3.33268 13.6829 6.31745 16.6677 9.99935 16.6677ZM9.99935 18.3343C14.6017 18.3343 18.3327 14.6034 18.3327 10.001C18.3327 5.39862 14.6017 1.66766 9.99935 1.66766C5.39698 1.66766 1.66602 5.39862 1.66602 10.001C1.66602 14.6034 5.39698 18.3343 9.99935 18.3343Z" fill="#777E91"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91009 6.91174C7.23553 6.5863 7.76317 6.5863 8.0886 6.91174L9.99935 8.82249L11.9101 6.91174C12.2355 6.5863 12.7632 6.5863 13.0886 6.91174C13.414 7.23718 13.414 7.76482 13.0886 8.09025L11.1779 10.001L13.0886 11.9117C13.414 12.2372 13.414 12.7648 13.0886 13.0903C12.7632 13.4157 12.2355 13.4157 11.9101 13.0903L9.99935 11.1795L8.0886 13.0903C7.76317 13.4157 7.23553 13.4157 6.91009 13.0903C6.58466 12.7648 6.58466 12.2372 6.91009 11.9117L8.82084 10.001L6.91009 8.09025C6.58466 7.76482 6.58466 7.23718 6.91009 6.91174Z" fill="#777E91"/>
+                            </svg>
+                            
+                        </i>
+                        Remove from sale
+                    </button>
+                    <button class="menu__btn flex"><i class="i__menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 18.3343C14.6017 18.3343 18.3327 14.6034 18.3327 10.001C18.3327 5.39862 14.6017 1.66766 9.99935 1.66766C5.39698 1.66766 1.66602 5.39862 1.66602 10.001C1.66602 14.6034 5.39698 18.3343 9.99935 18.3343ZM8.0886 6.91174C7.76317 6.5863 7.23553 6.5863 6.91009 6.91174C6.58466 7.23718 6.58466 7.76482 6.91009 8.09025L8.82084 10.001L6.91009 11.9117C6.58466 12.2372 6.58466 12.7648 6.91009 13.0903C7.23553 13.4157 7.76317 13.4157 8.0886 13.0903L9.99935 11.1795L11.9101 13.0903C12.2355 13.4157 12.7632 13.4157 13.0886 13.0903C13.414 12.7648 13.414 12.2372 13.0886 11.9117L11.1779 10.001L13.0886 8.09025C13.414 7.76482 13.414 7.23718 13.0886 6.91174C12.7632 6.5863 12.2355 6.5863 11.9101 6.91174L9.99935 8.82249L8.0886 6.91174Z" fill="#EF466F"/>
+                            </svg>
+                            
+
+                        </i>
+                        Burn token
+                    </button>
+                    <button class="menu__btn flex"><i class="i__menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 16.6677C13.6812 16.6677 16.666 13.6829 16.666 10.001C16.666 6.3191 13.6812 3.33433 9.99935 3.33433C6.31745 3.33433 3.33268 6.3191 3.33268 10.001C3.33268 13.6829 6.31745 16.6677 9.99935 16.6677ZM9.99935 18.3343C14.6017 18.3343 18.3327 14.6034 18.3327 10.001C18.3327 5.39862 14.6017 1.66766 9.99935 1.66766C5.39698 1.66766 1.66602 5.39862 1.66602 10.001C1.66602 14.6034 5.39698 18.3343 9.99935 18.3343Z" fill="#777E91"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 5.83429C9.53911 5.83429 9.16602 6.20739 9.16602 6.66762C9.16602 7.12786 9.53911 7.50096 9.99935 7.50096C10.4596 7.50096 10.8327 7.12786 10.8327 6.66762C10.8327 6.20739 10.4596 5.83429 9.99935 5.83429ZM9.99935 9.16762C9.53911 9.16762 9.16602 9.54072 9.16602 10.001V13.3343C9.16602 13.7945 9.53911 14.1676 9.99935 14.1676C10.4596 14.1676 10.8327 13.7945 10.8327 13.3343V10.001C10.8327 9.54072 10.4596 9.16762 9.99935 9.16762Z" fill="#777E91"/>
+                            </svg>
+                        </i>
+                        Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="modal none">
+        <div class="checkout">
+            <div class="flex">
+                <h1 class="main__title">Checkout</h1>
+                <button class="Modalclose" onclick="closeModal()">
+                    <i><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2929 13.2929C13.6834 12.9024 14.3166 12.9024 14.7071 13.2929L20 18.5858L25.2929 13.2929C25.6834 12.9024 26.3166 12.9024 26.7071 13.2929C27.0976 13.6834 27.0976 14.3166 26.7071 14.7071L21.4142 20L26.7071 25.2929C27.0976 25.6834 27.0976 26.3166 26.7071 26.7071C26.3166 27.0976 25.6834 27.0976 25.2929 26.7071L20 21.4142L14.7071 26.7071C14.3166 27.0976 13.6834 27.0976 13.2929 26.7071C12.9024 26.3166 12.9024 25.6834 13.2929 25.2929L18.5858 20L13.2929 14.7071C12.9024 14.3166 12.9024 13.6834 13.2929 13.2929Z" fill="#23262F"/>
+                        <rect x="1" y="1" width="38" height="38" rx="19" stroke="#E6E8EC" stroke-width="2"/>
+                        </svg></i>
+                    </button>
+            </div>
+
+            <p class="main__text checkout__text">You are about to purchase C O I N Z from UI8</p>
+
+            <div class="info">
+                <div class="flex border-bottom">
+                    <h5 class="info__text">0.007</h5>
+                    <h5 class="info__text">ETH</h5>
+                </div>
+
+                <div class="flex">
+                    <h5 class="info__text gray">Your balance</h5>
+                    <h5 class="info__text">8.498 ETH</h5>
+                </div>
+                <div class="flex">
+                    <h5 class="info__text gray">Service fee</h5>
+                    <h5 class="info__text">0 ETH</h5>
+                </div>
+                <div class="flex">
+                    <h5 class="info__text gray">You will pay</h5>
+                    <h5 class="info__text">0.007 ETH</h5>
+                </div>
+            </div>
+
+            <div class="error">
+                <div class="flex error-flex">
+                    <i class="error__i">
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0003 27.1667C21.8914 27.1667 26.667 22.391 26.667 16.5C26.667 10.609 21.8914 5.83332 16.0003 5.83332C10.1093 5.83332 5.33366 10.609 5.33366 16.5C5.33366 22.391 10.1093 27.1667 16.0003 27.1667ZM16.0003 29.8333C23.3641 29.8333 29.3337 23.8638 29.3337 16.5C29.3337 9.13619 23.3641 3.16666 16.0003 3.16666C8.63653 3.16666 2.66699 9.13619 2.66699 16.5C2.66699 23.8638 8.63653 29.8333 16.0003 29.8333Z" fill="#EF466F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0003 9.83334C15.2639 9.83334 14.667 10.4303 14.667 11.1667C14.667 11.9031 15.2639 12.5 16.0003 12.5C16.7367 12.5 17.3337 11.9031 17.3337 11.1667C17.3337 10.4303 16.7367 9.83334 16.0003 9.83334ZM16.0003 15.1667C15.2639 15.1667 14.667 15.7636 14.667 16.5V21.8333C14.667 22.5697 15.2639 23.1667 16.0003 23.1667C16.7367 23.1667 17.3337 22.5697 17.3337 21.8333V16.5C17.3337 15.7636 16.7367 15.1667 16.0003 15.1667Z" fill="#EF466F"/>
+                            </svg>                            
+                    </i>
+
+                    <div class="error-text">
+                        <h3 class="error__title">This creator is not verified</h3>
+                        <h3 class="error__text">Purchase this item at your own risk</h3>
+                    </div>
+
+                </div>
+            </div>
+            <button class="btn btn__color__blue error__btn">I understand, continue</button>
+            <button class="btn error__btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="modalPlace placeBid">
+        <div class="place-bid">
+            
+        <i><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="40" fill="#9757D7"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M47 33H33C31.8954 33 31 33.8954 31 35V45C31 46.1046 31.8954 47 33 47H47C48.1046 47 49 46.1046 49 45V35C49 33.8954 48.1046 33 47 33ZM33 31C30.7909 31 29 32.7909 29 35V45C29 47.2091 30.7909 49 33 49H47C49.2091 49 51 47.2091 51 45V35C51 32.7909 49.2091 31 47 31H33Z" fill="#FCFCFD"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M41 40C41 37.2386 43.2386 35 46 35H50C50.5523 35 51 35.4477 51 36C51 36.5523 50.5523 37 50 37H46C44.3431 37 43 38.3431 43 40C43 41.6569 44.3431 43 46 43H50C50.5523 43 51 43.4477 51 44C51 44.5523 50.5523 45 50 45H46C43.2386 45 41 42.7614 41 40Z" fill="#FCFCFD"/>
+            <path d="M47 40C47 40.5523 46.5523 41 46 41C45.4477 41 45 40.5523 45 40C45 39.4477 45.4477 39 46 39C46.5523 39 47 39.4477 47 40Z" fill="#FCFCFD"/>
+            </svg>
+            </i>
+
+            <p class="checkout__text">You need to connect your wallet first to sign messages and send transaction to Ethereum network</p>
+            <a href="../Upload/ConnectWallet/connect.html" class="btn btn__color__blue error__btn">Connect Wallet</a>
+            <button class="btn error__btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content flex">
+                <div class="footer-content-text">
+                    <img src="../images/logo.png" alt="" class="logo">
+                    <h1 class="footer__title">The New Creative Economy.</h1>
+                </div>
+                <div class="footer-content-text">
+                    <h3 class="footer-main__title">Crypter</h3>
+                    <a href="#" class="footer-main__text">Discover</a> <br>
+                    <a href="#" class="footer-main__text">Connect wallet</a><br>
+                    <a href="#" class="footer-main__text">Create item</a><br>
+                </div>
+                <div class="footer-content-text">
+                    <h3 class="footer-main__title">Info</h3>
+                    <a href="../Search/search.html" class="footer-main__text">Search</a><br>
+                    <a href="../FAQ/faq.html" class="footer-main__text">FAQ</a><br>
+                    <a href="../Activity/activity.html" class="footer-main__text">Activity</a><br>
+                </div>
+                <div class="footer-content-text">
+                    <h3 class="footer-main__title">Join Newsletter</h3>
+                    <p class="footer__text">Subscribe our newsletter to get more free design course and resource</p>
+                    <input class="search" type="text" placeholder="Enter your email">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./item.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto; 
+}
+
+.main-content {
+    text-align: center;
+}
+.main__img {
+    max-width: 226px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}

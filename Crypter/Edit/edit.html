@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit profile</title>
+    <link rel="stylesheet" href="./edit.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+
+                <div class="header-left">
+                    <a href="../Home/home.html"><img src="../images/logo.png" alt="" class="logo"></a>
+
+                    <div class="line"></div>
+                    <a href="#" class="header-left__link">Discover</a>
+                    <a href="#" class="header-left__link link__weight">How it work</a>
+                </div>
+
+                <button class="i-none" id="notification"><i>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 18.0233C21 18.5113 20.6043 18.907 20.1163 18.907H3.88372C3.39565 18.907 3 18.5113 3 18.0233C3 17.5352 3.39566 17.1395 3.88372 17.1395H3.9V10.9809C3.9 6.57288 7.527 3 12 3C16.473 3 20.1 6.57288 20.1 10.9809V17.1395H20.1163C20.6043 17.1395 21 17.5352 21 18.0233ZM5.7 17.1395H18.3V10.9809C18.3 7.5494 15.4794 4.76744 12 4.76744C8.5206 4.76744 5.7 7.5494 5.7 10.9809V17.1395ZM9.97604 20.7558C9.73121 20.2608 10.1977 19.7907 10.75 19.7907H13.25C13.8023 19.7907 14.2688 20.2608 14.024 20.7558C13.9155 20.9751 13.7699 21.1773 13.591 21.3529C13.169 21.7672 12.5967 22 12 22C11.4033 22 10.831 21.7672 10.409 21.3529C10.2301 21.1773 10.0845 20.9751 9.97604 20.7558Z"
+                                fill="#777E91" />
+                        </svg>
+                    </i></button>
+
+                <button class="hamburger">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.66634 10.667C5.92996 10.667 5.33301 11.2639 5.33301 12.0003C5.33301 12.7367 5.92996 13.3337 6.66634 13.3337H25.333C26.0694 13.3337 26.6663 12.7367 26.6663 12.0003C26.6663 11.2639 26.0694 10.667 25.333 10.667H6.66634Z"
+                            fill="#777E91" />
+                        <path
+                            d="M6.66634 18.667C5.92996 18.667 5.33301 19.2639 5.33301 20.0003C5.33301 20.7367 5.92996 21.3337 6.66634 21.3337H25.333C26.0694 21.3337 26.6663 20.7367 26.6663 20.0003C26.6663 19.2639 26.0694 18.667 25.333 18.667H6.66634Z"
+                            fill="#777E91" />
+                    </svg>
+                </button>
+
+                <div class="header-right nav-responsive">
+                    <button class="close">X</button>
+                    <input type="text" name="" id="search" placeholder="Search">
+                    <i class="i__search">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="7" stroke="#CCD2E3" stroke-width="2" />
+                            <path d="M20 20L17 17" stroke="#CCD2E3" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </i>
+                    <i class="i__notification" id="notification">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 18.0233C21 18.5113 20.6043 18.907 20.1163 18.907H3.88372C3.39565 18.907 3 18.5113 3 18.0233C3 17.5352 3.39566 17.1395 3.88372 17.1395H3.9V10.9809C3.9 6.57288 7.527 3 12 3C16.473 3 20.1 6.57288 20.1 10.9809V17.1395H20.1163C20.6043 17.1395 21 17.5352 21 18.0233ZM5.7 17.1395H18.3V10.9809C18.3 7.5494 15.4794 4.76744 12 4.76744C8.5206 4.76744 5.7 7.5494 5.7 10.9809V17.1395ZM9.97604 20.7558C9.73121 20.2608 10.1977 19.7907 10.75 19.7907H13.25C13.8023 19.7907 14.2688 20.2608 14.024 20.7558C13.9155 20.9751 13.7699 21.1773 13.591 21.3529C13.169 21.7672 12.5967 22 12 22C11.4033 22 10.831 21.7672 10.409 21.3529C10.2301 21.1773 10.0845 20.9751 9.97604 20.7558Z"
+                                fill="#777E91" />
+                        </svg>
+                    </i>
+                    <a href="../Upload/upload.html" class="header-right__btn">Upload</a>
+                    <button class="header-right__btn btn__tranparent" id="profile">Connect Wallet</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    
+    <header>
+        <div class="container">
+            <div class="header-content flex">
+                <a href="../Home/home.html" class="back__btn btn flex"><i class="i__arrow"><svg width="10" height="7"
+                            viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.60636 0.843797C3.33582 0.59406 2.91404 0.610928 2.66431 0.881474L0.510459 3.21478C0.274727 3.47015 0.274726 3.86378 0.510455 4.11915L2.6643 6.45251C2.91404 6.72306 3.33581 6.73994 3.60636 6.4902C3.87691 6.24047 3.89378 5.81869 3.64405 5.54815L2.52297 4.33364L9.00033 4.33364C9.36852 4.33364 9.66699 4.03516 9.66699 3.66697C9.66699 3.29878 9.36852 3.0003 9.00033 3.0003L2.523 3.0003L3.64404 1.78585C3.89378 1.51531 3.87691 1.09353 3.60636 0.843797Z"
+                                fill="#777E91" />
+                        </svg>
+                    </i> Back to home</a>
+
+                <div class="nav-bar">
+                    <p class="nav-bar__text flex"><a href="../Profile/profile.html" class="back__link">Profile</a> >
+                        <span>Edit Profile</span></a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <h1 class="main__title">Edit Profile</h1>
+                <p class="main__text">You can set preferred display name, create <a href="#">your profile URL</a> and manage other personal settings.</p>
+                <div class="content-flex flex">
+                    <div class="content-left flex">
+                        <div class="img">
+                            <img src="../images/101.png" alt="">
+                        </div>
+                        <div class="content-left-text">
+                            <h3 class="profile__title">Profile photo</h3>
+                            <p class="main__text">We recommend an image
+                                of at least 400x400.Gifs work too 🙌</p>
+                                <button class="btn">Upload</button>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <h3 class="content-right__title">Account info</h3>
+
+                        <form action="">
+                            <label for="" class="input__name">display name</label>
+                            <input type="text" class="input" placeholder="Enter your display name">
+
+                            <label for="" class="input__name">Custom url</label>
+                            <input type="url" class="input" placeholder="ui8.net/Your custom URL">
+
+                            <label for="" class="input__name" v>Bio</label>
+                            <textarea type="text" class="input" placeholder="About yourselt in a few words"></textarea>
+
+                            <h3 class="content-right__title">Social</h3>
+
+                            <label for="" class="input__name">portfolio or website</label>
+                            <input type="text" class="input" placeholder="Enter URL">
+
+                            <label for="" class="input__name">Twitter</label>
+                            <input type="text" class="input" placeholder="@twitter username">
+
+                            <p class="main__text">To update your settings you should sign message through your wallet. Click 'Update profile' then sign the message</p>
+
+                        </form>
+
+                        <div class="flex">
+                            <button class="btn btn__color__blue" id="update" onclick="validate()">Update Profile</button>
+                            <button class="btn clear__btn flex" onclick="clear()"><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#777E91"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 8.29289C8.68342 7.90237 9.31658 7.90237 9.70711 8.29289L12 10.5858L14.2929 8.29289C14.6834 7.90237 15.3166 7.90237 15.7071 8.29289C16.0976 8.68342 16.0976 9.31658 15.7071 9.70711L13.4142 12L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L12 13.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L10.5858 12L8.29289 9.70711C7.90237 9.31658 7.90237 8.68342 8.29289 8.29289Z" fill="#777E91"/>
+                                </svg>
+                                </i>Clear all</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content flex">
+                <div class="footer-content-text">
+                    <img src="../images/logo.png" alt="" class="logo">
+                    <h1 class="footer__title">The New Creative Economy.</h1>
+                </div>
+                <div class="footer-content-text">
+                    <h3 class="footer-main__title">Crypter</h3>
+                    <a href="#" class="footer-main__text">Discover</a> <br>
+                    <a href="#" class="footer-main__text">Connect wallet</a><br>
+                    <a href="#" class="footer-main__text">Create item</a><br>
+                </div>
+                <div class="footer-content-text">
+                    <h3 class="footer-main__title">Info</h3>
+                    <a href="../Search/search.html" class="footer-main__text">Search</a><br>
+                    <a href="../FAQ/faq.html" class="footer-main__text">FAQ</a><br>
+                    <a href="../Activity/activity.html" class="footer-main__text">Activity</a><br>
+                </div>
+                <div class="footer-content-text">
+                    <h3 class="footer-main__title">Join Newsletter</h3>
+                    <p class="footer__text">Subscribe our newsletter to get more free design course and resource</p>
+                    <input class="search" type="text" placeholder="Enter your email">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
