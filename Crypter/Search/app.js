@@ -69,9 +69,9 @@ function searchItem() {
         if (arr.length == 0) {
         notFound()
     }
+    items = []
     items = arr
     displayItems()
-    console.log(items);
 }
 
 function filterByName(item) {
@@ -85,6 +85,9 @@ function notFound() {
 
 
 function displayItems() {
+    console.log(items);
+    itemsDiv.innerHTML = ''
+
 
     for (let item of items) {
 

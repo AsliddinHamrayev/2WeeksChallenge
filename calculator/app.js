@@ -1,7 +1,7 @@
-window.onload = function (){
+function mounted(){
 	let elements = document.querySelectorAll(".operators");
 	let screen = document.querySelector('.results');
-	let clear =   document.querySelector('.clear');
+	let clear = document.querySelector('.clear');
 	
 	for(let i=0;i<elements.length;i+=1){
 		  if(elements[i].innerHTML === '='){
@@ -38,3 +38,5 @@ window.onload = function (){
     };
   }
 };
+
+mounted()

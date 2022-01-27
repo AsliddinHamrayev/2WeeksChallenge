@@ -331,6 +331,22 @@ main {
     font-size: 13px;
 }
 
+.bid-card {
+    animation: CardAnimation .5s ease-out;
+}
+
+@keyframes CardAnimation {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .bid-flex-text {
     display: flex;
     align-items: center;
@@ -365,6 +381,10 @@ main {
     width: 100%;
 }
  
+
+.content-flex {
+    justify-content: unset;
+}
 
 /*Custom Select*/
 .select {
@@ -450,6 +470,10 @@ main {
       width: 100%;
   }
 
+  .content-right {
+    max-width: 980px;
+    width: 100%;
+  }
   
 /*Footer*/
 
@@ -491,6 +515,8 @@ footer {
     margin-top: 50px;
     border-top: 1px solid #e6e6e6;
 }
+
+
 
 
   @media screen and (max-width: 1024px) {

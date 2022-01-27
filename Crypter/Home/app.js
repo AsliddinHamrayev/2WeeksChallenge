@@ -23,6 +23,7 @@ select.forEach(a => {
 		next.style.zIndex = index++;
 	})
 })
+
 option.forEach(a => {
 	a.addEventListener('click', b => {
 		b.target.parentElement.classList.remove('toggle');
