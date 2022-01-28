@@ -24,7 +24,7 @@ function validate() {
 
 function clear() {
     inputs.forEach((input) => {
-        input.value = null
+        input.innerHTML = ''
     })
 }
 

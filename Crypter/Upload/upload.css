@@ -237,6 +237,8 @@ header {
 
 .main-cards {
     padding: 0 230px;
+    justify-content: center;
+    gap: 32px;
 }
 
 .card {
@@ -329,8 +331,12 @@ header {
     }
 
     .main-cards {
-        display: block;
+        flex-wrap: wrap;
         padding: 0;
+    }
+
+    .nav-bar {
+        display: none;
     }
 
     .card {
@@ -339,6 +345,7 @@ header {
         align-items: center;
         border: none;
         border-radius: 0;
+        gap: 32px;
         border-bottom: 1px solid #e6e6e6;
         padding: 14px 0;
     }

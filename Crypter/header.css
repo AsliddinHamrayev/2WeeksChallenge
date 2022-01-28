@@ -1,0 +1,9 @@
+.link__profile {
+    display: none;
+}
+
+@media screen and (max-width: 376px) {
+    .link__profile {
+        display: block;
+    }
+}

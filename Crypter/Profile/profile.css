@@ -606,6 +606,8 @@ input[type="checkbox"].switch {
 
   .buttons-flex {
       margin-bottom: 22px;
+      justify-content: flex-start;
+    gap: 12px;  
   }
 
 @media screen and (max-width: 1024px) {
@@ -621,8 +623,9 @@ input[type="checkbox"].switch {
         padding: 252px 0 0 614px;
     }
 
-    .bid-flex {
+    .flex.bid-flex {
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .main-content-right {
@@ -636,6 +639,10 @@ input[type="checkbox"].switch {
 
     .modal-profile {
         right: 20px;
+    }
+
+    .buttons-flex {
+        justify-content: space-between;
     }
 
 }

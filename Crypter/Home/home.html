@@ -10,6 +10,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
         rel="stylesheet">
+        <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="../footer.css">
 </head>
 
 <body>
@@ -27,22 +32,27 @@
 
                 <button class="hamburger">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.66634 10.667C5.92996 10.667 5.33301 11.2639 5.33301 12.0003C5.33301 12.7367 5.92996 13.3337 6.66634 13.3337H25.333C26.0694 13.3337 26.6663 12.7367 26.6663 12.0003C26.6663 11.2639 26.0694 10.667 25.333 10.667H6.66634Z" fill="#777E91"/>
-                        <path d="M6.66634 18.667C5.92996 18.667 5.33301 19.2639 5.33301 20.0003C5.33301 20.7367 5.92996 21.3337 6.66634 21.3337H25.333C26.0694 21.3337 26.6663 20.7367 26.6663 20.0003C26.6663 19.2639 26.0694 18.667 25.333 18.667H6.66634Z" fill="#777E91"/>
-                        </svg>
-                        
+                        <path
+                            d="M6.66634 10.667C5.92996 10.667 5.33301 11.2639 5.33301 12.0003C5.33301 12.7367 5.92996 13.3337 6.66634 13.3337H25.333C26.0694 13.3337 26.6663 12.7367 26.6663 12.0003C26.6663 11.2639 26.0694 10.667 25.333 10.667H6.66634Z"
+                            fill="#777E91" />
+                        <path
+                            d="M6.66634 18.667C5.92996 18.667 5.33301 19.2639 5.33301 20.0003C5.33301 20.7367 5.92996 21.3337 6.66634 21.3337H25.333C26.0694 21.3337 26.6663 20.7367 26.6663 20.0003C26.6663 19.2639 26.0694 18.667 25.333 18.667H6.66634Z"
+                            fill="#777E91" />
+                    </svg>
+
                 </button>
 
                 <div class="header-right nav-responsive">
+                    <div class="header-flex">
+                        
                     <button class="close">X</button>
-                    <input type="text" name="" id="search" placeholder="Search">
-                    <i class="i__search">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="search-box">
+                        <input type="text" name="" id="search" placeholder="Search">
+                        <svg class="i__search" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="11" cy="11" r="7" stroke="#CCD2E3" stroke-width="2" />
                             <path d="M20 20L17 17" stroke="#CCD2E3" stroke-width="2" stroke-linecap="round" />
                         </svg>
-
-                    </i>
+                    </div>
                     <i class="i__notification">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -54,6 +64,7 @@
                     </i>
                     <a href="../Upload/upload.html" class="header-right__btn">Upload</a>
                     <button class="header-right__btn btn__tranparent">Connect Wallet</button>
+                    </div>
                 </div>
 
             </div>
@@ -103,15 +114,15 @@
 
                                 <div class="time-card-hours">
                                     <div class="hours">
-                                        <h1 class="hours__title">19</h1>
+                                        <h1 class="hours__title" id="hours">19</h1>
                                         <p class="hours__tag">Hrs</p>
                                     </div>
                                     <div class="hours">
-                                        <h1 class="hours__title">24</h1>
+                                        <h1 class="hours__title" id="minutes">24</h1>
                                         <p class="hours__tag">mins</p>
                                     </div>
                                     <div class="hours">
-                                        <h1 class="hours__title">19</h1>
+                                        <h1 class="hours__title" id="seconds">19</h1>
                                         <p class="hours__tag">secs</p>
                                     </div>
                                 </div>
@@ -130,7 +141,8 @@
         <div class="container">
             <div class="features-content">
                 <div class="features-content-left">
-                    <img src="../images/jakob-owens-BqSACXqDbBU-unsplash 1.png" alt="" class="features-content-left__img">
+                    <img src="../images/jakob-owens-BqSACXqDbBU-unsplash 1.png" alt=""
+                        class="features-content-left__img">
                     <div class="author-flex">
 
                         <div class="author">
@@ -149,40 +161,137 @@
                 </div>
                 <div class="features-content-middle">
                     <div class="content-middle-flex">
-                        <img src="../images/michael-dziedzic-bOZRVWwbW9Y-unsplash 1.png" class="content-middle__img" alt="">
+                        <div class="overlay"><svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_2439_13852)">
+                                <path
+                                    d="M8 24C8 10.7452 18.7452 0 32 0C45.2548 0 56 10.7452 56 24C56 37.2548 45.2548 48 32 48C18.7452 48 8 37.2548 8 24Z"
+                                    fill="#FCFCFD" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M33.3941 20.8433C33.6647 20.5936 34.0864 20.6104 34.3362 20.881L36.49 23.2143C36.7258 23.4697 36.7258 23.8633 36.49 24.1187L34.3362 26.452C34.0865 26.7226 33.6647 26.7394 33.3941 26.4897C33.1236 26.24 33.1067 25.8182 33.3564 25.5477L34.4775 24.3331L28.0002 24.3331C27.632 24.3331 27.3335 24.0347 27.3335 23.6665C27.3335 23.2983 27.632 22.9998 28.0002 22.9998L34.4775 22.9998L33.3564 21.7854C33.1067 21.5148 33.1236 21.093 33.3941 20.8433Z"
+                                    fill="#777E91" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_2439_13852" x="0" y="0" width="64" height="64"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feMorphology radius="8" operator="erode" in="SourceAlpha"
+                                        result="effect1_dropShadow_2439_13852" />
+                                    <feOffset dy="8" />
+                                    <feGaussianBlur stdDeviation="8" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.0583333 0 0 0 0 0.0583333 0 0 0 0 0.0583333 0 0 0 0.2 0" />
+                                    <feBlend mode="multiply" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_2439_13852" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2439_13852"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                        <img src="../images/michael-dziedzic-bOZRVWwbW9Y-unsplash 1.png" class="content-middle__img"
+                            alt="">
 
                         <div class="content-middle-card">
-                            <p class="content-middle-card__title">ETH never die</p>
+                            <p class="content-middle-card__title">Elon Musk silver coin 3d print</p>
                             <div class="content-middle-author">
-                                <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" class="author__img" alt="">
+                                <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png"
+                                    class="author__img middle__img" alt="">
                                 <h5 class="price__txt">0.27 ETH</h5>
-                                <p>1 of 12</p>
+                                <p class="price__text__middle">1 of 12</p>
                             </div>
                             <button class="header-right__btn btn__tranparent">Place a bid</button>
                         </div>
                     </div>
                     <div class="content-middle-flex">
-                        <img src="../images/michael-dziedzic-bOZRVWwbW9Y-unsplash 1.png" class="content-middle__img" alt="">
+                        <div class="overlay"><svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_2439_13852)">
+                                <path
+                                    d="M8 24C8 10.7452 18.7452 0 32 0C45.2548 0 56 10.7452 56 24C56 37.2548 45.2548 48 32 48C18.7452 48 8 37.2548 8 24Z"
+                                    fill="#FCFCFD" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M33.3941 20.8433C33.6647 20.5936 34.0864 20.6104 34.3362 20.881L36.49 23.2143C36.7258 23.4697 36.7258 23.8633 36.49 24.1187L34.3362 26.452C34.0865 26.7226 33.6647 26.7394 33.3941 26.4897C33.1236 26.24 33.1067 25.8182 33.3564 25.5477L34.4775 24.3331L28.0002 24.3331C27.632 24.3331 27.3335 24.0347 27.3335 23.6665C27.3335 23.2983 27.632 22.9998 28.0002 22.9998L34.4775 22.9998L33.3564 21.7854C33.1067 21.5148 33.1236 21.093 33.3941 20.8433Z"
+                                    fill="#777E91" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_2439_13852" x="0" y="0" width="64" height="64"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feMorphology radius="8" operator="erode" in="SourceAlpha"
+                                        result="effect1_dropShadow_2439_13852" />
+                                    <feOffset dy="8" />
+                                    <feGaussianBlur stdDeviation="8" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.0583333 0 0 0 0 0.0583333 0 0 0 0 0.0583333 0 0 0 0.2 0" />
+                                    <feBlend mode="multiply" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_2439_13852" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2439_13852"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                        <img src="../images/michael-dziedzic-bOZRVWwbW9Y-unsplash 1.png" class="content-middle__img"
+                            alt="">
 
                         <div class="content-middle-card">
                             <p class="content-middle-card__title">ETH never die</p>
                             <div class="content-middle-author">
-                                <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" class="author__img" alt="">
+                                <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png"
+                                    class="author__img middle__img" alt="">
                                 <h5 class="price__txt">0.27 ETH</h5>
-                                <p>1 of 12</p>
+                                <p class="price__text__middle">1 of 12</p>
                             </div>
-                            <button class="header-right__btn btn__tranparent">Place a bid</button>
+                            <button class="header-right__btn">Place a bid</button>
                         </div>
                     </div>
                     <div class="content-middle-flex">
-                        <img src="../images/michael-dziedzic-bOZRVWwbW9Y-unsplash 1.png" class="content-middle__img" alt="">
+                        <div class="overlay"><svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_2439_13852)">
+                                    <path
+                                        d="M8 24C8 10.7452 18.7452 0 32 0C45.2548 0 56 10.7452 56 24C56 37.2548 45.2548 48 32 48C18.7452 48 8 37.2548 8 24Z"
+                                        fill="#FCFCFD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M33.3941 20.8433C33.6647 20.5936 34.0864 20.6104 34.3362 20.881L36.49 23.2143C36.7258 23.4697 36.7258 23.8633 36.49 24.1187L34.3362 26.452C34.0865 26.7226 33.6647 26.7394 33.3941 26.4897C33.1236 26.24 33.1067 25.8182 33.3564 25.5477L34.4775 24.3331L28.0002 24.3331C27.632 24.3331 27.3335 24.0347 27.3335 23.6665C27.3335 23.2983 27.632 22.9998 28.0002 22.9998L34.4775 22.9998L33.3564 21.7854C33.1067 21.5148 33.1236 21.093 33.3941 20.8433Z"
+                                        fill="#777E91" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_2439_13852" x="0" y="0" width="64" height="64"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feMorphology radius="8" operator="erode" in="SourceAlpha"
+                                            result="effect1_dropShadow_2439_13852" />
+                                        <feOffset dy="8" />
+                                        <feGaussianBlur stdDeviation="8" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.0583333 0 0 0 0 0.0583333 0 0 0 0 0.0583333 0 0 0 0.2 0" />
+                                        <feBlend mode="multiply" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_2439_13852" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2439_13852"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <img src="../images/michael-dziedzic-bOZRVWwbW9Y-unsplash 1.png" class="content-middle__img"
+                            alt="">
 
                         <div class="content-middle-card">
                             <p class="content-middle-card__title">ETH never die</p>
                             <div class="content-middle-author">
-                                <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" class="author__img" alt="">
+
+                                <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png"
+                                    class="author__img middle__img" alt="">
                                 <h5 class="price__txt">0.27 ETH</h5>
-                                <p>1 of 12</p>
+                                <p class="price__text__middle">1 of 12</p>
                             </div>
                             <button class="header-right__btn btn__tranparent">Place a bid</button>
                         </div>
@@ -191,44 +300,57 @@
                 <div class="features-content-right">
                     <p class="latest__title">Latest upload from creators 🔥</p>
                     <div class="latest">
-                        
-                    <div class="author-right">
-                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author-right__img">
-                        <div class="author-text">
-                            <p class="author__text">Payton Harris</p>
-                            <p class="author__name">Enrico Cole</p>
+
+                        <div class="author-right">
+                            <div class="number">6</div>
+                            <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt=""
+                                class="author-right__img">
+                            <div class="author-text">
+                                <p class="author__text">Payton Harris</p>
+                                <p class="author__name">Enrico Cole</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="author-right">
-                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author-right__img">
-                        <div class="author-text">
-                            <p class="author__text">Payton Harris</p>
-                            <p class="author__name">Enrico Cole</p>
+                        <div class="author-right">
+                            <div class="number">6</div>
+                            <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt=""
+                                class="author-right__img">
+                            <div class="author-text">
+                                <p class="author__text">Payton Harris</p>
+                                <p class="author__name">Enrico Cole</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="author-right">
-                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author-right__img">
-                        <div class="author-text">
-                            <p class="author__text">Payton Harris</p>
-                            <p class="author__name">Enrico Cole</p>
+                        <div class="author-right">
+                            <div class="number">6</div>
+                            <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt=""
+                                class="author-right__img">
+                            <div class="author-text">
+                                <p class="author__text">Payton Harris</p>
+                                <p class="author__name">Enrico Cole</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="author-right">
-                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author-right__img">
-                        <div class="author-text">
-                            <p class="author__text">Payton Harris</p>
-                            <p class="author__name">Enrico Cole</p>
+                        <div class="author-right">
+                            <div class="number">6</div>
+                            <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt=""
+                                class="author-right__img">
+                            <div class="author-text">
+                                <p class="author__text">Payton Harris</p>
+                                <p class="author__name">Enrico Cole</p>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                     <button class="features-content-right__btn">Discover more <i>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 11C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13V11ZM3 13C2.44771 13 2 12.5523 2 12C2 11.4477 2.44771 11 3 11V13ZM17 13H3V11H17V13Z" fill="#CCD2E3"/>
-                            <path d="M21.7152 11.7966L16.265 7.90356C15.7355 7.52535 15 7.90385 15 8.55455V15.4454C15 16.0961 15.7355 16.4746 16.265 16.0964L21.7152 12.2034C21.8548 12.1037 21.8548 11.8963 21.7152 11.7966Z" fill="#CCD2E3"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 11C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13V11ZM3 13C2.44771 13 2 12.5523 2 12C2 11.4477 2.44771 11 3 11V13ZM17 13H3V11H17V13Z"
+                                    fill="#CCD2E3" />
+                                <path
+                                    d="M21.7152 11.7966L16.265 7.90356C15.7355 7.52535 15 7.90385 15 8.55455V15.4454C15 16.0961 15.7355 16.4746 16.265 16.0964L21.7152 12.2034C21.8548 12.1037 21.8548 11.8963 21.7152 11.7966Z"
+                                    fill="#CCD2E3" />
                             </svg>
-                            
-                    </i></button>
+
+                        </i></button>
                 </div>
             </div>
         </div>
@@ -240,7 +362,7 @@
                 <div class="sellers-header">
                     <div class="sellers-text">
                         <h2 class="sellers__title">Popular</h2>
-                        <h1 class="sellers__text"> Sellers</h1>
+                        <h1 class="sellers__text"> Sellers </h1>
                     </div>
                     <div class="select">
                         <div class="selectBtn" data-type="firstOption">First option</div>
@@ -253,25 +375,43 @@
                 </div>
 
                 <div class="sellers-flex">
-                    <div class="seller-card">
+                    <div class="swiper-wrapper">
+                    <div class="seller-card swiper-slide">
                         <div class="seller-card-header">
-                            <p class="seller__tag"> <i class="seller__tag__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z" fill="#FCFCFD"/>
-                                <path d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z" fill="#FCFCFD"/>
-                                </svg>
-                                </i> #1</p>
+                            <p class="seller__tag"><svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                                 #1</p>
                             <div class="seller-icons">
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z" fill="#B1B5C4"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z" fill="#B1B5C4"/>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z" fill="#B1B5C4"/>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
+                                </i>
                             </div>
                         </div>
 
@@ -281,25 +421,42 @@
                         <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
                     </div>
 
-                    <div class="seller-card">
+                    <div class="seller-card swiper-slide">
                         <div class="seller-card-header">
-                            <p class="seller__tag"> <i class="seller__tag__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z" fill="#FCFCFD"/>
-                                <path d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z" fill="#FCFCFD"/>
-                                </svg>
-                                </i> #1</p>
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                                 #1</p>
                             <div class="seller-icons">
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z" fill="#B1B5C4"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z" fill="#B1B5C4"/>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z" fill="#B1B5C4"/>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
+                                </i>
                             </div>
                         </div>
 
@@ -309,25 +466,42 @@
                         <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
                     </div>
 
-                    <div class="seller-card card-none">
+                    <div class="seller-card swiper-slide card-none">
                         <div class="seller-card-header">
-                            <p class="seller__tag"> <i class="seller__tag__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z" fill="#FCFCFD"/>
-                                <path d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z" fill="#FCFCFD"/>
-                                </svg>
-                                </i> #1</p>
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                                 #1</p>
                             <div class="seller-icons">
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z" fill="#B1B5C4"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z" fill="#B1B5C4"/>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z" fill="#B1B5C4"/>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
+                                </i>
                             </div>
                         </div>
 
@@ -337,25 +511,42 @@
                         <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
                     </div>
 
-                    <div class="seller-card">
+                    <div class="seller-card swiper-slide">
                         <div class="seller-card-header">
-                            <p class="seller__tag"> <i class="seller__tag__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z" fill="#FCFCFD"/>
-                                <path d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z" fill="#FCFCFD"/>
-                                </svg>
-                                </i> #1</p>
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                               #1</p>
                             <div class="seller-icons">
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z" fill="#B1B5C4"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z" fill="#B1B5C4"/>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z" fill="#B1B5C4"/>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
+                                </i>
                             </div>
                         </div>
 
@@ -365,25 +556,222 @@
                         <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
                     </div>
 
-                    <div class="seller-card">
+                    <div class="seller-card swiper-slide">
                         <div class="seller-card-header">
-                            <p class="seller__tag"> <i class="seller__tag__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z" fill="#FCFCFD"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z" fill="#FCFCFD"/>
-                                <path d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z" fill="#FCFCFD"/>
-                                </svg>
-                                </i> #1</p>
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                             #1</p>
                             <div class="seller-icons">
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z" fill="#B1B5C4"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z" fill="#B1B5C4"/>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
-                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z" fill="#B1B5C4"/>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
                                     </svg>
-                                    </i>
+                                </i>
+                            </div>
+                        </div>
+
+                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="sellers-card__img">
+
+                        <h1 class="sellers-card__name">Edd Harris</h1>
+                        <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
+                    </div>
+                    
+                    <div class="seller-card swiper-slide">
+                        <div class="seller-card-header">
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                             #1</p>
+                            <div class="seller-icons">
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+
+                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="sellers-card__img">
+
+                        <h1 class="sellers-card__name">Edd Harris</h1>
+                        <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
+                    </div>
+                    
+                    <div class="seller-card swiper-slide">
+                        <div class="seller-card-header">
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                             #1</p>
+                            <div class="seller-icons">
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+
+                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="sellers-card__img">
+
+                        <h1 class="sellers-card__name">Edd Harris</h1>
+                        <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
+                    </div>
+                    
+                    <div class="seller-card swiper-slide">
+                        <div class="seller-card-header">
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                             #1</p>
+                            <div class="seller-icons">
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+
+                        <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="sellers-card__img">
+
+                        <h1 class="sellers-card__name">Edd Harris</h1>
+                        <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
+                    </div>
+                    
+                    <div class="seller-card swiper swiper-slide">
+                        <div class="seller-card-header">
+                            <p class="seller__tag"> <svg width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.6668 3.33333H5.3335C4.96531 3.33333 4.66683 3.63181 4.66683 4V6.66667C4.66683 8.50762 6.15921 10 8.00016 10C9.84111 10 11.3335 8.50762 11.3335 6.66667V4C11.3335 3.63181 11.035 3.33333 10.6668 3.33333ZM5.3335 2C4.22893 2 3.3335 2.89543 3.3335 4V6.66667C3.3335 9.244 5.42283 11.3333 8.00016 11.3333C10.5775 11.3333 12.6668 9.244 12.6668 6.66667V4C12.6668 2.89543 11.7714 2 10.6668 2H5.3335Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666504 5.3335C0.666504 4.22893 1.56193 3.3335 2.6665 3.3335H4.6665V8.66683H3.33317C1.86041 8.66683 0.666504 7.47292 0.666504 6.00016V5.3335ZM2.6665 4.66683H3.33317V7.3335C2.59679 7.3335 1.99984 6.73654 1.99984 6.00016V5.3335C1.99984 4.96531 2.29831 4.66683 2.6665 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3332 5.3335C15.3332 4.22893 14.4377 3.3335 13.3332 3.3335H11.3332V8.66683H12.6665C14.1393 8.66683 15.3332 7.47292 15.3332 6.00016V5.3335ZM13.3332 4.66683H12.6665V7.3335C13.4029 7.3335 13.9998 6.73654 13.9998 6.00016V5.3335C13.9998 4.96531 13.7014 4.66683 13.3332 4.66683Z"
+                                            fill="#FCFCFD" />
+                                        <path
+                                            d="M8.00016 10C7.63197 10 7.3335 10.2985 7.3335 10.6667V12.6667H6.00016C5.63197 12.6667 5.3335 12.9651 5.3335 13.3333C5.3335 13.7015 5.63197 14 6.00016 14H10.0002C10.3684 14 10.6668 13.7015 10.6668 13.3333C10.6668 12.9651 10.3684 12.6667 10.0002 12.6667H8.66683V10.6667C8.66683 10.2985 8.36835 10 8.00016 10Z"
+                                            fill="#FCFCFD" />
+                                    </svg>
+                             #1</p>
+                            <div class="seller-icons">
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 4C10.4477 4 8.64807 4.161 7.20361 4.35177C5.90363 4.52346 4.92337 5.50372 4.75168 6.80371C4.56091 8.24816 4.3999 10.0478 4.3999 12C4.3999 13.9522 4.56091 15.7518 4.75168 17.1963C4.92337 18.4963 5.90363 19.4765 7.20361 19.6482C8.64806 19.839 10.4477 20 12.3999 20C14.3521 20 16.1517 19.839 17.5962 19.6482C18.8962 19.4765 19.8764 18.4963 20.0481 17.1963C20.2389 15.7518 20.3999 13.9522 20.3999 12C20.3999 10.0478 20.2389 8.24816 20.0481 6.80371C19.8764 5.50372 18.8962 4.52346 17.5962 4.35177C16.1517 4.16101 14.3521 4 12.3999 4ZM6.94174 2.36899C4.74495 2.65912 3.05903 4.34504 2.76889 6.54184C2.56944 8.05208 2.3999 9.94127 2.3999 12C2.3999 14.0587 2.56944 15.9479 2.76889 17.4582C3.05903 19.655 4.74495 21.3409 6.94174 21.631C8.45198 21.8305 10.3412 22 12.3999 22C14.4586 22 16.3478 21.8305 17.8581 21.631C20.0549 21.3409 21.7408 19.655 22.0309 17.4582C22.2304 15.9479 22.3999 14.0587 22.3999 12C22.3999 9.94127 22.2304 8.05208 22.0309 6.54184C21.7408 4.34504 20.0549 2.65912 17.8581 2.36899C16.3478 2.16953 14.4586 2 12.3999 2C10.3412 2 8.45198 2.16953 6.94174 2.36899Z"
+                                            fill="#B1B5C4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.3999 17C12.9522 17 13.3999 16.5523 13.3999 16V13H16.3999C16.9522 13 17.3999 12.5523 17.3999 12C17.3999 11.4477 16.9522 11 16.3999 11H13.3999V8C13.3999 7.44772 12.9522 7 12.3999 7C11.8476 7 11.3999 7.44772 11.3999 8V11H8.3999C7.84762 11 7.3999 11.4477 7.3999 12C7.3999 12.5523 7.84762 13 8.3999 13H11.3999V16C11.3999 16.5523 11.8476 17 12.3999 17Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
+                                <i class="i__seller"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.3731 13.516C17.9249 13.494 18.3544 13.0287 18.3323 12.4769L18.142 7.71753C18.1211 7.19663 17.7036 6.77913 17.1827 6.75829L12.4233 6.56789C11.8715 6.54581 11.4062 6.97527 11.3842 7.52712C11.3621 8.07896 11.7915 8.54421 12.3434 8.56629L14.8206 8.6654L7.95037 15.5357C7.55984 15.9262 7.55984 16.5594 7.95037 16.9499C8.34089 17.3404 8.97406 17.3404 9.36458 16.9499L16.2348 10.0796L16.3339 12.5568C16.356 13.1086 16.8212 13.5381 17.3731 13.516Z"
+                                            fill="#B1B5C4" />
+                                    </svg>
+                                </i>
                             </div>
                         </div>
 
@@ -393,8 +781,18 @@
                         <h1 class="sellers-card__price">2.456 <span>ETH</span></h1>
                     </div>
                 </div>
+                <button id="next-btn" class="slider__btn"><svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.09094 0.265207C9.49676 -0.109399 10.1294 -0.0840962 10.504 0.321722L13.7348 3.82168C14.0884 4.20474 14.0884 4.79518 13.7348 5.17824L10.504 8.67828C10.1294 9.08411 9.49677 9.10941 9.09095 8.73481C8.68513 8.36021 8.65982 7.72755 9.03442 7.32173L10.716 5.49997L0.999999 5.49997C0.447714 5.49997 -7.64154e-07 5.05225 -7.86799e-07 4.49997C-8.09444e-07 3.94768 0.447714 3.49997 0.999999 3.49997L10.716 3.49997L9.03443 1.67829C8.65982 1.27247 8.68513 0.639813 9.09094 0.265207Z" fill="#777E91"/>
+                    </svg>
+                    </button>
+                <button id="previous-btn" class="slider__btn"><svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.90906 0.265207C4.50324 -0.109399 3.87058 -0.0840962 3.49597 0.321722L0.265201 3.82168C-0.0883963 4.20474 -0.0884 4.79518 0.265194 5.17824L3.49597 8.67828C3.87057 9.08411 4.50323 9.10941 4.90905 8.73481C5.31487 8.36021 5.34018 7.72755 4.96558 7.32173L3.28397 5.49997L13 5.49997C13.5523 5.49997 14 5.05225 14 4.49997C14 3.94768 13.5523 3.49997 13 3.49997L3.284 3.49997L4.96557 1.67829C5.34018 1.27247 5.31487 0.639813 4.90906 0.265207Z" fill="#777E91"/>
+                    </svg>
+                    </button>
+                </div>
             </div>
         </div>
+
     </section>
 
     <section class="bid">
@@ -404,21 +802,44 @@
                     <h1 class="bid__title">Hot bid</h1>
 
                     <div class="icons">
-                        <button class="slider__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13V11ZM21 13C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11V13ZM7 13H21V11H7V13Z" fill="#CCD2E3"/>
-                            <path d="M2.28481 11.7966L7.73501 7.90356C8.2645 7.52535 9 7.90385 9 8.55455V15.4454C9 16.0961 8.2645 16.4746 7.73501 16.0964L2.28481 12.2034C2.14522 12.1037 2.14522 11.8963 2.28481 11.7966Z" fill="#CCD2E3"/>
+                        <button class="slider__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13V11ZM21 13C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11V13ZM7 13H21V11H7V13Z"
+                                    fill="#CCD2E3" />
+                                <path
+                                    d="M2.28481 11.7966L7.73501 7.90356C8.2645 7.52535 9 7.90385 9 8.55455V15.4454C9 16.0961 8.2645 16.4746 7.73501 16.0964L2.28481 12.2034C2.14522 12.1037 2.14522 11.8963 2.28481 11.7966Z"
+                                    fill="#CCD2E3" />
                             </svg>
-                            </button>
-                        <button class="slider__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 11C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13V11ZM3 13C2.44771 13 2 12.5523 2 12C2 11.4477 2.44771 11 3 11V13ZM17 13H3V11H17V13Z" fill="#CCD2E3"/>
-                            <path d="M21.7152 11.7966L16.265 7.90356C15.7355 7.52535 15 7.90385 15 8.55455V15.4454C15 16.0961 15.7355 16.4746 16.265 16.0964L21.7152 12.2034C21.8548 12.1037 21.8548 11.8963 21.7152 11.7966Z" fill="#CCD2E3"/>
+                        </button>
+                        <button class="slider__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 11C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13V11ZM3 13C2.44771 13 2 12.5523 2 12C2 11.4477 2.44771 11 3 11V13ZM17 13H3V11H17V13Z"
+                                    fill="#CCD2E3" />
+                                <path
+                                    d="M21.7152 11.7966L16.265 7.90356C15.7355 7.52535 15 7.90385 15 8.55455V15.4454C15 16.0961 15.7355 16.4746 16.265 16.0964L21.7152 12.2034C21.8548 12.1037 21.8548 11.8963 21.7152 11.7966Z"
+                                    fill="#CCD2E3" />
                             </svg>
-                            </button>
+                        </button>
                     </div>
                 </div>
 
                 <div class="bid-flex hot-bid-flex">
                     <div class="bid-card card-none">
+                        <div class="bid-overlay">
+                            <div class="flex">
+                                <p class="flex__tag">Puchasing!</p>
+                                <i class="purchasing__i">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5772 3.76422C10.2547 4.07365 9.7456 4.07365 9.42316 3.76422L8.84616 3.2105C8.1708 2.56239 7.25844 2.16667 6.25016 2.16667C4.17909 2.16667 2.50016 3.8456 2.50016 5.91667C2.50016 7.90219 3.57498 9.54171 5.12663 10.8888C6.67959 12.237 8.53633 13.1312 9.6457 13.5876C9.87766 13.683 10.1227 13.683 10.3546 13.5876C11.464 13.1312 13.3207 12.237 14.8737 10.8888C16.4253 9.54171 17.5002 7.90218 17.5002 5.91667C17.5002 3.8456 15.8212 2.16667 13.7502 2.16667C12.7419 2.16667 11.8295 2.56239 11.1542 3.2105L10.5772 3.76422ZM10.0002 2.00798C9.02692 1.074 7.70557 0.5 6.25016 0.5C3.25862 0.5 0.833496 2.92512 0.833496 5.91667C0.833496 11.2235 6.64211 14.1542 9.01165 15.1289C9.6498 15.3914 10.3505 15.3914 10.9887 15.1289C13.3582 14.1542 19.1668 11.2235 19.1668 5.91667C19.1668 2.92512 16.7417 0.5 13.7502 0.5C12.2948 0.5 10.9734 1.074 10.0002 2.00798Z" fill="#777E91"/>
+                                        </svg>
+                                        
+                                    </i>
+                            </div>
+
+                            <button class="header-right__btn">Purchasing</button>
+                        </div>
                         <img src="../images/fuu-j-Lo7venJ_ywM-unsplash 1.png" alt="" class="bid__img">
                         <div class="bid-flex">
                             <h4 class="bid-card__title">Amazing digital art</h4>
@@ -431,17 +852,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -449,6 +883,19 @@
                     </div>
 
                     <div class="bid-card">
+                        <div class="bid-overlay">
+                            <div class="flex">
+                                <p class="flex__tag">Puchasing!</p>
+                                <i class="purchasing__i">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5772 3.76422C10.2547 4.07365 9.7456 4.07365 9.42316 3.76422L8.84616 3.2105C8.1708 2.56239 7.25844 2.16667 6.25016 2.16667C4.17909 2.16667 2.50016 3.8456 2.50016 5.91667C2.50016 7.90219 3.57498 9.54171 5.12663 10.8888C6.67959 12.237 8.53633 13.1312 9.6457 13.5876C9.87766 13.683 10.1227 13.683 10.3546 13.5876C11.464 13.1312 13.3207 12.237 14.8737 10.8888C16.4253 9.54171 17.5002 7.90218 17.5002 5.91667C17.5002 3.8456 15.8212 2.16667 13.7502 2.16667C12.7419 2.16667 11.8295 2.56239 11.1542 3.2105L10.5772 3.76422ZM10.0002 2.00798C9.02692 1.074 7.70557 0.5 6.25016 0.5C3.25862 0.5 0.833496 2.92512 0.833496 5.91667C0.833496 11.2235 6.64211 14.1542 9.01165 15.1289C9.6498 15.3914 10.3505 15.3914 10.9887 15.1289C13.3582 14.1542 19.1668 11.2235 19.1668 5.91667C19.1668 2.92512 16.7417 0.5 13.7502 0.5C12.2948 0.5 10.9734 1.074 10.0002 2.00798Z" fill="#777E91"/>
+                                        </svg>
+                                        
+                                    </i>
+                            </div>
+
+                            <button class="header-right__btn">Purchasing</button>
+                        </div>
                         <img src="../images/fuu-j-Lo7venJ_ywM-unsplash 1.png" alt="" class="bid__img">
                         <div class="bid-flex">
                             <h4 class="bid-card__title">Amazing digital art</h4>
@@ -461,17 +908,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -479,6 +939,19 @@
                     </div>
 
                     <div class="bid-card">
+                        <div class="bid-overlay">
+                            <div class="flex">
+                                <p class="flex__tag">Puchasing!</p>
+                                <i class="purchasing__i">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5772 3.76422C10.2547 4.07365 9.7456 4.07365 9.42316 3.76422L8.84616 3.2105C8.1708 2.56239 7.25844 2.16667 6.25016 2.16667C4.17909 2.16667 2.50016 3.8456 2.50016 5.91667C2.50016 7.90219 3.57498 9.54171 5.12663 10.8888C6.67959 12.237 8.53633 13.1312 9.6457 13.5876C9.87766 13.683 10.1227 13.683 10.3546 13.5876C11.464 13.1312 13.3207 12.237 14.8737 10.8888C16.4253 9.54171 17.5002 7.90218 17.5002 5.91667C17.5002 3.8456 15.8212 2.16667 13.7502 2.16667C12.7419 2.16667 11.8295 2.56239 11.1542 3.2105L10.5772 3.76422ZM10.0002 2.00798C9.02692 1.074 7.70557 0.5 6.25016 0.5C3.25862 0.5 0.833496 2.92512 0.833496 5.91667C0.833496 11.2235 6.64211 14.1542 9.01165 15.1289C9.6498 15.3914 10.3505 15.3914 10.9887 15.1289C13.3582 14.1542 19.1668 11.2235 19.1668 5.91667C19.1668 2.92512 16.7417 0.5 13.7502 0.5C12.2948 0.5 10.9734 1.074 10.0002 2.00798Z" fill="#777E91"/>
+                                        </svg>
+                                        
+                                    </i>
+                            </div>
+
+                            <button class="header-right__btn">Purchasing</button>
+                        </div>
                         <img src="../images/fuu-j-Lo7venJ_ywM-unsplash 1.png" alt="" class="bid__img">
                         <div class="bid-flex">
                             <h4 class="bid-card__title">Amazing digital art</h4>
@@ -491,17 +964,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -509,6 +995,19 @@
                     </div>
 
                     <div class="bid-card">
+                        <div class="bid-overlay">
+                            <div class="flex">
+                                <p class="flex__tag">Puchasing!</p>
+                                <i class="purchasing__i">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5772 3.76422C10.2547 4.07365 9.7456 4.07365 9.42316 3.76422L8.84616 3.2105C8.1708 2.56239 7.25844 2.16667 6.25016 2.16667C4.17909 2.16667 2.50016 3.8456 2.50016 5.91667C2.50016 7.90219 3.57498 9.54171 5.12663 10.8888C6.67959 12.237 8.53633 13.1312 9.6457 13.5876C9.87766 13.683 10.1227 13.683 10.3546 13.5876C11.464 13.1312 13.3207 12.237 14.8737 10.8888C16.4253 9.54171 17.5002 7.90218 17.5002 5.91667C17.5002 3.8456 15.8212 2.16667 13.7502 2.16667C12.7419 2.16667 11.8295 2.56239 11.1542 3.2105L10.5772 3.76422ZM10.0002 2.00798C9.02692 1.074 7.70557 0.5 6.25016 0.5C3.25862 0.5 0.833496 2.92512 0.833496 5.91667C0.833496 11.2235 6.64211 14.1542 9.01165 15.1289C9.6498 15.3914 10.3505 15.3914 10.9887 15.1289C13.3582 14.1542 19.1668 11.2235 19.1668 5.91667C19.1668 2.92512 16.7417 0.5 13.7502 0.5C12.2948 0.5 10.9734 1.074 10.0002 2.00798Z" fill="#777E91"/>
+                                        </svg>
+                                        
+                                    </i>
+                            </div>
+
+                            <button class="header-right__btn">Purchasing</button>
+                        </div>
                         <img src="../images/fuu-j-Lo7venJ_ywM-unsplash 1.png" alt="" class="bid__img">
                         <div class="bid-flex">
                             <h4 class="bid-card__title">Amazing digital art</h4>
@@ -521,17 +1020,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -550,20 +1062,23 @@
                     <div class="collections-card">
 
                         <img src="../images/gallery1.png" alt="" class="collections__img">
-    
+
                         <div class="container-flex">
-                            <img src="../images/gustavo-centurion-O6fs4ablxw8-unsplash 1.png" alt="" class="collections__img img__size">
-                            <img src="../images/pexels-melvin-buezo-2733938 1.png" alt="" class="collections__img img__size">
-                            <img src="../images/clark-van-der-beken-1KBCgRD8BDc-unsplash 1.png" alt="" class="collections__img img__size">
+                            <img src="../images/gustavo-centurion-O6fs4ablxw8-unsplash 1.png" alt=""
+                                class="collections__img img__size">
+                            <img src="../images/pexels-melvin-buezo-2733938 1.png" alt=""
+                                class="collections__img img__size">
+                            <img src="../images/clark-van-der-beken-1KBCgRD8BDc-unsplash 1.png" alt=""
+                                class="collections__img img__size">
                         </div>
-    
+
                         <h4 class="collections-flex__title">Awesome collection</h4>
                         <div class="bid-flex">
                             <div class="author">
                                 <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author__img">
                                 <p class="collections-auth__title">By Kennih Olson</p>
                             </div>
-    
+
                             <p class="collections__tag">28 items</p>
                         </div>
                     </div>
@@ -571,20 +1086,23 @@
                     <div class="collections-card">
 
                         <img src="../images/gallery1.png" alt="" class="collections__img">
-    
+
                         <div class="container-flex">
-                            <img src="../images/gustavo-centurion-O6fs4ablxw8-unsplash 1.png" alt="" class="collections__img img__size">
-                            <img src="../images/pexels-melvin-buezo-2733938 1.png" alt="" class="collections__img img__size">
-                            <img src="../images/clark-van-der-beken-1KBCgRD8BDc-unsplash 1.png" alt="" class="collections__img img__size">
+                            <img src="../images/gustavo-centurion-O6fs4ablxw8-unsplash 1.png" alt=""
+                                class="collections__img img__size">
+                            <img src="../images/pexels-melvin-buezo-2733938 1.png" alt=""
+                                class="collections__img img__size">
+                            <img src="../images/clark-van-der-beken-1KBCgRD8BDc-unsplash 1.png" alt=""
+                                class="collections__img img__size">
                         </div>
-    
+
                         <h4 class="collections-flex__title">Awesome collection</h4>
                         <div class="bid-flex">
                             <div class="author">
                                 <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author__img">
                                 <p class="collections-auth__title">By Kennih Olson</p>
                             </div>
-    
+
                             <p class="collections__tag">28 items</p>
                         </div>
                     </div>
@@ -592,20 +1110,23 @@
                     <div class="collections-card">
 
                         <img src="../images/gallery1.png" alt="" class="collections__img">
-    
+
                         <div class="container-flex">
-                            <img src="../images/gustavo-centurion-O6fs4ablxw8-unsplash 1.png" alt="" class="collections__img img__size">
-                            <img src="../images/pexels-melvin-buezo-2733938 1.png" alt="" class="collections__img img__size">
-                            <img src="../images/clark-van-der-beken-1KBCgRD8BDc-unsplash 1.png" alt="" class="collections__img img__size">
+                            <img src="../images/gustavo-centurion-O6fs4ablxw8-unsplash 1.png" alt=""
+                                class="collections__img img__size">
+                            <img src="../images/pexels-melvin-buezo-2733938 1.png" alt=""
+                                class="collections__img img__size">
+                            <img src="../images/clark-van-der-beken-1KBCgRD8BDc-unsplash 1.png" alt=""
+                                class="collections__img img__size">
                         </div>
-    
+
                         <h4 class="collections-flex__title">Awesome collection</h4>
                         <div class="bid-flex">
                             <div class="author">
                                 <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" alt="" class="author__img">
                                 <p class="collections-auth__title">By Kennih Olson</p>
                             </div>
-    
+
                             <p class="collections__tag">28 items</p>
                         </div>
                     </div>
@@ -637,7 +1158,54 @@
                         <button class="discover__btn">Video</button>
                     </div>
 
-                    <button class="filter__btn">Filter  x</button>
+                    <button class="filter__btn">Filter <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52876 3.52851C3.78911 3.26816 4.21122 3.26816 4.47157 3.52851L8.00016 7.05711L11.5288 3.52851C11.7891 3.26816 12.2112 3.26816 12.4716 3.52851C12.7319 3.78886 12.7319 4.21097 12.4716 4.47132L8.94297 7.99992L12.4716 11.5285C12.7319 11.7889 12.7319 12.211 12.4716 12.4713C12.2112 12.7317 11.7891 12.7317 11.5288 12.4713L8.00016 8.94273L4.47157 12.4713C4.21122 12.7317 3.78911 12.7317 3.52876 12.4713C3.26841 12.211 3.26841 11.7889 3.52876 11.5285L7.05735 7.99992L3.52876 4.47132C3.26841 4.21097 3.26841 3.78886 3.52876 3.52851Z" fill="#FCFCFD"/>
+                        </svg>
+                        </span></button>
+                </div>
+
+                <div class="discover-filter">
+                    <div class="filter-box">
+                        <label for="">Price</label>
+                        <div class="select">
+                            <div class="selectBtn" data-type="firstOption">First option</div>
+                            <div class="selectDropdown">
+                                <div class="option" data-type="firstOption">First option</div>
+                                <div class="option" data-type="secondOption">Second option</div>
+                                <div class="option" data-type="thirdOption">Third option</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <label for="">Likes</label>
+                        <div class="select">
+                            <div class="selectBtn" data-type="firstOption">First option</div>
+                            <div class="selectDropdown">
+                                <div class="option" data-type="firstOption">First option</div>
+                                <div class="option" data-type="secondOption">Second option</div>
+                                <div class="option" data-type="thirdOption">Third option</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-box none">
+                        <label for="">Creator</label>
+                        <div class="select">
+                            <div class="selectBtn" data-type="firstOption">First option</div>
+                            <div class="selectDropdown">
+                                <div class="option" data-type="firstOption">First option</div>
+                                <div class="option" data-type="secondOption">Second option</div>
+                                <div class="option" data-type="thirdOption">Third option</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="header-right__btn filterr__btn">Advanced filters</button>
+                    <div class="filter-box range-none">
+                        <label for="">Price</label>
+                        <input type="range" name="" id="">
+                    </div>
                 </div>
 
                 <div class="discover-features grid">
@@ -654,17 +1222,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -683,17 +1264,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -712,17 +1306,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -741,17 +1348,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -770,17 +1390,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -799,17 +1432,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -828,17 +1474,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -857,17 +1516,30 @@
                         <hr>
                         <div class="bid-flex">
                             <div class="bid-flex-text">
-                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z" fill="#777E91"/>
-                                    <path d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z" fill="#777E91"/>
-                                    <path d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z" fill="#777E91"/>
-                                    <path d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z" fill="#777E91"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z" fill="#777E91"/>
+                                <i class="bid__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.1667 0C14.6269 0 15 0.373096 15 0.833333V2.5C15 2.96024 14.6269 3.33333 14.1667 3.33333C13.7064 3.33333 13.3333 2.96024 13.3333 2.5V0.833333C13.3333 0.373096 13.7064 0 14.1667 0Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M14.1667 10C14.6269 10 15 10.3731 15 10.8333V15.8333C15 16.2936 14.6269 16.6667 14.1667 16.6667C13.7064 16.6667 13.3333 16.2936 13.3333 15.8333V10.8333C13.3333 10.3731 13.7064 10 14.1667 10Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 3.33333C6.29357 3.33333 6.66667 3.70643 6.66667 4.16667V10.8333C6.66667 11.2936 6.29357 11.6667 5.83333 11.6667C5.3731 11.6667 5 11.2936 5 10.8333V4.16667C5 3.70643 5.3731 3.33333 5.83333 3.33333Z"
+                                            fill="#777E91" />
+                                        <path
+                                            d="M5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333V19.1667C6.66667 19.6269 6.29357 20 5.83333 20C5.3731 20 5 19.6269 5 19.1667V15.8333C5 15.3731 5.3731 15 5.83333 15Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.6668 4.1665C11.6668 2.78579 12.7861 1.6665 14.1668 1.6665C15.5475 1.6665 16.6668 2.78579 16.6668 4.1665V9.1665C16.6668 10.5472 15.5475 11.6665 14.1668 11.6665C12.7861 11.6665 11.6668 10.5472 11.6668 9.1665V4.1665ZM15.0002 4.1665V9.1665C15.0002 9.62674 14.6271 9.99984 14.1668 9.99984C13.7066 9.99984 13.3335 9.62674 13.3335 9.1665V4.1665C13.3335 3.70627 13.7066 3.33317 14.1668 3.33317C14.6271 3.33317 15.0002 3.70627 15.0002 4.1665Z"
+                                            fill="#777E91" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.3335 12.4998C3.3335 11.1191 4.45278 9.99984 5.8335 9.99984C7.21421 9.99984 8.3335 11.1191 8.3335 12.4998V14.1665C8.3335 15.5472 7.21421 16.6665 5.8335 16.6665C4.45278 16.6665 3.3335 15.5472 3.3335 14.1665V12.4998ZM6.66683 12.4998V14.1665C6.66683 14.6267 6.29373 14.9998 5.8335 14.9998C5.37326 14.9998 5.00016 14.6267 5.00016 14.1665V12.4998C5.00016 12.0396 5.37326 11.6665 5.8335 11.6665C6.29373 11.6665 6.66683 12.0396 6.66683 12.4998Z"
+                                            fill="#777E91" />
                                     </svg>
-                                    </i>
+                                </i>
 
-                                    <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
+                                <p class="bid__text">Highest bid <span>0.001 ETH</span></p>
                             </div>
 
                             <p class="bid__text">New bid 🔥</p>
@@ -887,9 +1559,9 @@
                     <h1 class="crypto__mainTitle">Earn free crypto with Crypter</h1>
                     <p class="crypto__text">A creative agency that lead and inspire</p>
 
-                    <div class="flex">
-                        <button class="header-right__btn">Earn Now</button>
-                        <button class="header-right__btn btn__tranparent">Discover me</button>
+                    <div class="flex flex-button">
+                        <button class="header-right__btn earn__btn">Earn Now</button>
+                        <button class="header-right__btn btn__tranparent earn__btn">Discover me</button>
                     </div>
                 </div>
                 <img src="../images/img.png" alt="" class="crypto__img">
@@ -920,11 +1592,24 @@
                     <h3 class="footer-main__title">Join Newsletter</h3>
                     <p class="footer__text">Subscribe our newsletter to get more free design course and resource</p>
                     <input class="search" type="text" placeholder="Enter your email">
+                    <i class="search-next__icon icon__next">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="16" fill="#3772FF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0909 11.2652C18.4968 10.8906 19.1294 10.9159 19.504 11.3217L22.7348 14.8217C23.0884 15.2047 23.0884 15.7952 22.7348 16.1782L19.504 19.6783C19.1294 20.0841 18.4968 20.1094 18.091 19.7348C17.6851 19.3602 17.6598 18.7276 18.0344 18.3217L19.716 16.5L10 16.5C9.44771 16.5 9 16.0523 9 15.5C9 14.9477 9.44771 14.5 10 14.5L19.716 14.5L18.0344 12.6783C17.6598 12.2725 17.6851 11.6398 18.0909 11.2652Z" fill="#FCFCFD"/>
+                            </svg>
+                            
+                    </i>
                 </div>
+
+            </div>
+            <div class="footer-bottom flex justify-content-between">
+                <p class="footer-bottom__text">Copyright © 2021 UI8 LLC. All rights reserved</p>
+                <p class="footer-bottom__text">We use cookies for better service. <a href="#">Accept</a></p>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
 </body>
 

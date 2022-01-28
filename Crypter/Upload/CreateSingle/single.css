@@ -224,7 +224,7 @@ header {
 
 .button-wrapper {
     position: relative;
-    height: 100%;
+    height: 182px;
     text-align: center;
     background: #F4F5F6;
     display: flex;
@@ -483,6 +483,10 @@ header {
     /* .main-cards {
         padding: 0 100px;
     } */
+
+    .inputs {
+        gap: 20px;
+    }
     
     .main-content-left-header {
         flex-direction: column-reverse;
@@ -510,6 +514,14 @@ header {
         display: none;
     }
 
+    .inputs {
+        flex-wrap: wrap;
+    }
+
+
+    .item-input {
+        width: 100%;
+    }
     .main-content {
         margin-top: 40px;
     }

@@ -546,6 +546,7 @@ footer {
 
     .buttons {
         text-align: center;
+        overflow: scroll;
     }
 
     .bid-flex, .content-flex {
