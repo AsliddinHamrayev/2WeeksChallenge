@@ -625,7 +625,6 @@ input[type="checkbox"].switch {
 
     .flex.bid-flex {
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .main-content-right {

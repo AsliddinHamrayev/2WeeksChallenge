@@ -308,6 +308,7 @@ margin-top: 40px;
     font-size: 14px;
     color: #777E90;
     font-weight: normal;
+    margin-top: 32px;
 }
 
 .user__title span{
@@ -454,7 +455,6 @@ button {
 }
 
 .modal.none {
-
     display: none;
 }
 
@@ -484,18 +484,31 @@ button {
 .gray {
     color: #777E90;
 }
-.modal, .modalPlace {
+.modal, .modalPlace, .stepsModal, .yayModal {
     width: 100%;
     height: 100vh;
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0 0 0 / 75%);
     display: flex;
     align-items: center;
     z-index: 1;
     justify-content: center;
+    transition: .5s ease-out;
 }
+
+.color__purple {
+color: #9757D7;
+font-weight: 500;
+
+}
+
+.procces__title.font-weight {
+    font-weight: 600;
+}
+
+
 
 .error__title {
     font-size: 16px;
@@ -532,6 +545,23 @@ button {
     margin-top: 8px;
 }
 
+/*Steps*/
+
+.steps, .yay {
+    max-width: 448px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.transition {
+    transition: .5s ease-out;
+}
+
+.stepsModal.none{
+    display: none;
+}
+
 /*Place*/
 
 .place-bid {
@@ -545,6 +575,148 @@ button {
 .placeBid {
     display: none;
 }
+
+.progress-box {
+    justify-content: unset;
+}
+
+.purchasing__text {
+    color: #000;
+}
+
+
+/*Progress*/
+
+
+.progress {
+    width: 42px;
+    height: 42px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 200px;
+    margin: 20px;
+}
+
+.progress::after {content: "%";}
+
+.progress .title {position: relative;z-index: 100;}
+
+.progress .overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.progress .left {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 7px solid #3772FF;
+    border-radius: 100px 0px 0px 100px;
+    border-right: 0;
+    transform-origin: right;
+}
+
+.progress .left {animation: load1 1s linear forwards;}
+
+.progress:nth-of-type(2) .right, .progress:nth-of-type(3) .right {animation: load2 .5s linear forwards 1s;}
+
+/* .progress:last-of-type .right, .progress:first-of-type .right {animation: load3 .8s linear forwards 1s;} */
+
+@keyframes load1 {
+    0% {transform: rotate(0deg);}
+
+    100% {transform: rotate(180deg);}
+}
+
+@keyframes load2 {
+    0% {z-index: 100;transform: rotate(180deg);}
+
+    100% {z-index: 100;transform: rotate(270deg);}
+}
+
+@keyframes load3 {
+    0% {z-index: 100;transform: rotate(180deg);}
+
+    100% {
+        z-index: 100;transform: rotate(315deg);}
+}
+
+
+/*Yay*/
+
+.yay {
+    text-align: center;
+}
+
+.yay__title {
+    font-size: 48px;
+}
+.closeButton {
+    justify-content: flex-end;
+}
+
+.procces__text {
+    font-size: 16px;
+    padding: 0 86px;
+    margin: 32px 0;
+}
+
+.procces__title {
+    font-size: 14px;
+    font-weight: normal;
+    width: 135px;
+    text-align: left;
+}
+
+.procces-flex {
+    padding: 8px 0;
+}
+
+.procces {
+    border: 1px solid #e6e6e6;
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.time__title {
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.social-buttons {
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.yayModal.none {
+    display: none;
+}
+
+.social__link {
+    border: 2px solid #E6E8EC;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    border-radius: 50%;
+    transition: .2s ease-out;
+}
+
+.social__link:hover {
+    border: 2px solid #777E90;
+}
+
 @media screen and (max-width: 1024px) {
     .container {
         max-width: 970px;
@@ -556,8 +728,8 @@ button {
 
     .aside {
         flex-direction: row;
-        left: 107px;
-        bottom: 70px;
+        left: 146px;
+        bottom: 163px;
         background: #fff;
         max-width: 187px;
         padding: 10px;
@@ -569,7 +741,7 @@ button {
     }
 
     .menu {
-        left: 81px;
+        left: 123px;
     right: unset;
     top: 225px;
     }
@@ -596,8 +768,12 @@ button {
         top: 36px;
     }
 
-    .checkout, .place-bid {
+    .checkout, .place-bid, .steps, .yay {
         max-width: 300px;
+    }
+
+    .steps__img {
+        display: none;
     }
     /*Default*/
 

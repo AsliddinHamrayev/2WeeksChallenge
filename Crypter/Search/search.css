@@ -549,7 +549,7 @@ footer {
         overflow: scroll;
     }
 
-    .bid-flex, .content-flex {
+    .unset-flex {
         justify-content: center;
     }
     

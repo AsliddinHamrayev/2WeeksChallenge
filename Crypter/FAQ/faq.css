@@ -310,7 +310,8 @@ button.accordion.is-open:after {
 }
 
 .link__accordion {
-    width: 19%;
+    width: 47%;
+    margin-bottom: 32px;
 }
 
 /*Bid*/

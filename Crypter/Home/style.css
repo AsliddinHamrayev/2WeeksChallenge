@@ -176,6 +176,7 @@ header {
 
 .author-flex {
     display: flex;
+    margin-top: 20px;
     justify-content: space-between;
 }
 
@@ -190,6 +191,74 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.range-slider{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#range { -webkit-appearance: none; width: 100%; }
+#range:focus { outline: none; }
+
+#range::before, #range::after {
+    position: absolute;
+    top: 2rem;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+    padding: 3px 5px;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 4px;
+}
+
+
+#range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: linear-gradient(90deg, #3772FF var(--range-progress), #dee4ec var(--range-progress));
+    border-radius: 1rem;
+}
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 6px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,255,.3);
+    border-radius: 50%;
+    background: #3772FF;
+    cursor: pointer;
+    height: 32px; 
+    width: 32px;
+    transform: translateY(calc(-50% + 5px));
+}
+
+#tooltip {
+    position: absolute;
+    top: -2.25rem;
+}
+
+
+#tooltip span {
+    position: absolute;
+    text-align: center;
+    display: block;
+    line-height: 1;
+    padding: 4px 8px;
+    color: #fff;
+    border-radius: 16px;
+    background: #141416;
+    font-size: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+}
+
+.filter-box {
+    width: 100%;
 }
 
 .bid-card {
@@ -516,15 +585,16 @@ header {
     transition: .2s ease-out;
 }
 
-.slider__btn:hover {
-    border: 2px solid #E6E8EC;
+.seller__tag.green {
+    background-color: #45B26B;
 }
 
-.seller-card:hover {
-    transform: scale(1.1);
-    -webkit-box-shadow: -2px 9px 29px 0px rgba(0,0,0,0.55); 
-box-shadow: -2px 9px 29px 0px rgba(0,0,0,0.55);
-z-index: 99;
+.seller__tag.red {
+    background-color: #9757D7;
+}
+
+.slider__btn:hover {
+    border: 2px solid #E6E8EC;
 }
 
 .swiper-wrapper {
@@ -539,7 +609,8 @@ z-index: 99;
     padding: 24px;
     background: #fff;
     border-radius: 10px;
-    width: 250px;
+    max-width: 251px;
+    min-width: 250px;
     text-align: center;
     transition: .5s ease-out;
 }
@@ -597,6 +668,7 @@ z-index: 99;
 }
 
 .bid__img {
+    min-width: 245px;
     border-radius: 10px;
     width: 100%;
 }
@@ -1078,14 +1150,18 @@ button {
     }
 
     #video {
-        width: 340px;
+        width: 311px;
+    }
+
+    #next-btn, #previous {
+       display: none;
     }
     .crypto__img {
         width: 100%;
         margin-top: 40px;
     }
 
-    .flex-button {
+    .flex.flex-button {
         display: unset;
     }
 
@@ -1138,9 +1214,12 @@ button {
     flex-direction: column;
     gap: 12px;
 }
-    .latest,
-    .sellers-flex {
+    .latest{
         overflow: scroll;
+    }
+
+    .swiper-horizontal {
+        width: 300px;
     }
 
     .hot-bid-flex {

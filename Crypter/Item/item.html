@@ -271,7 +271,7 @@
 
                 </div>
             </div>
-            <button class="btn btn__color__blue error__btn">I understand, continue</button>
+            <button class="btn btn__color__blue error__btn" onclick="steps()">I understand, continue</button>
             <button class="btn error__btn" onclick="closeModal()">Cancel</button>
         </div>
     </div>
@@ -290,6 +290,109 @@
             <p class="checkout__text">You need to connect your wallet first to sign messages and send transaction to Ethereum network</p>
             <a href="../Upload/ConnectWallet/connect.html" class="btn btn__color__blue error__btn">Connect Wallet</a>
             <button class="btn error__btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="stepsModal none">
+        <div class="steps">
+            <div class="flex">
+                <h1 class="main__title">Follow steps</h1>
+                <button class="Modalclose" onclick="closeModal()">
+                    <i><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2929 13.2929C13.6834 12.9024 14.3166 12.9024 14.7071 13.2929L20 18.5858L25.2929 13.2929C25.6834 12.9024 26.3166 12.9024 26.7071 13.2929C27.0976 13.6834 27.0976 14.3166 26.7071 14.7071L21.4142 20L26.7071 25.2929C27.0976 25.6834 27.0976 26.3166 26.7071 26.7071C26.3166 27.0976 25.6834 27.0976 25.2929 26.7071L20 21.4142L14.7071 26.7071C14.3166 27.0976 13.6834 27.0976 13.2929 26.7071C12.9024 26.3166 12.9024 25.6834 13.2929 25.2929L18.5858 20L13.2929 14.7071C12.9024 14.3166 12.9024 13.6834 13.2929 13.2929Z" fill="#23262F"/>
+                        <rect x="1" y="1" width="38" height="38" rx="19" stroke="#E6E8EC" stroke-width="2"/>
+                        </svg></i>
+                    </button>
+            </div>
+
+
+           <div class="progress-box flex">
+            <div class="progress">
+                <div class="overlay"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="progress-text">
+                <h3 class="error__title purchasing__text">Purchasing</h3>
+                <h3 class="error__text purchasing__text">Sending transaction with your wallet</h3>
+            </div>
+           </div>
+            
+            <div class="error">
+                <div class="flex error-flex">
+                    <i class="error__i">
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0003 27.1667C21.8914 27.1667 26.667 22.391 26.667 16.5C26.667 10.609 21.8914 5.83332 16.0003 5.83332C10.1093 5.83332 5.33366 10.609 5.33366 16.5C5.33366 22.391 10.1093 27.1667 16.0003 27.1667ZM16.0003 29.8333C23.3641 29.8333 29.3337 23.8638 29.3337 16.5C29.3337 9.13619 23.3641 3.16666 16.0003 3.16666C8.63653 3.16666 2.66699 9.13619 2.66699 16.5C2.66699 23.8638 8.63653 29.8333 16.0003 29.8333Z" fill="#EF466F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0003 9.83334C15.2639 9.83334 14.667 10.4303 14.667 11.1667C14.667 11.9031 15.2639 12.5 16.0003 12.5C16.7367 12.5 17.3337 11.9031 17.3337 11.1667C17.3337 10.4303 16.7367 9.83334 16.0003 9.83334ZM16.0003 15.1667C15.2639 15.1667 14.667 15.7636 14.667 16.5V21.8333C14.667 22.5697 15.2639 23.1667 16.0003 23.1667C16.7367 23.1667 17.3337 22.5697 17.3337 21.8333V16.5C17.3337 15.7636 16.7367 15.1667 16.0003 15.1667Z" fill="#EF466F"/>
+                            </svg>                            
+                    </i>
+
+                    <div class="error-text">
+                        <h3 class="error__title">This creator is not verified</h3>
+                        <h3 class="error__text">Purchase this item at your own risk</h3>
+                    </div>
+
+                    <img src="../images/austin-wade-X6Uj51n5CE8-unsplash 1.png" class="steps__img" alt="">
+
+                </div>
+            </div>
+
+            <button class="btn btn__color__blue error__btn" onclick="yayOpen()">I understand, continue</button>
+            <button class="btn error__btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="yayModal none">
+        <div class="yay">
+            
+            <div class="flex closeButton">
+                <button class="Modalclose" onclick="closeModal()">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2929 13.2929C13.6834 12.9024 14.3166 12.9024 14.7071 13.2929L20 18.5858L25.2929 13.2929C25.6834 12.9024 26.3166 12.9024 26.7071 13.2929C27.0976 13.6834 27.0976 14.3166 26.7071 14.7071L21.4142 20L26.7071 25.2929C27.0976 25.6834 27.0976 26.3166 26.7071 26.7071C26.3166 27.0976 25.6834 27.0976 25.2929 26.7071L20 21.4142L14.7071 26.7071C14.3166 27.0976 13.6834 27.0976 13.2929 26.7071C12.9024 26.3166 12.9024 25.6834 13.2929 25.2929L18.5858 20L13.2929 14.7071C12.9024 14.3166 12.9024 13.6834 13.2929 13.2929Z" fill="#23262F"/>
+                        <rect x="1" y="1" width="38" height="38" rx="19" stroke="#E6E8EC" stroke-width="2"/>
+                        </svg>
+                    </button>
+            </div>
+
+                <h3 class="yay__title">Yay! 🎉</h3>
+                <p class="error__text purchasing__text procces__text">You successfully purchased C O I N Z from UI8</p>
+
+                <div class="procces">
+                    <div class="flex procces-flex">
+                        <h4 class="procces__title">Status</h4>
+                        <h4 class="procces__title">Transaction ID</h4>
+                    </div>
+                    <div class="flex procces-flex">
+                        <h4 class="procces__title color__purple">Processing</h4>
+                        <h4 class="procces__title font-weight">0msx836930...87r398</h4>
+                    </div>
+                </div>
+
+                <h4 class="time__title">Time to show-off</h4>
+                <div class="flex social-buttons">
+                    <a href="#" class="social__link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#777E91"/>
+                        <path d="M12 10C12 9.44772 12.4477 9 13 9H14C14.5523 9 15 8.55229 15 8C15 7.44772 14.5523 7 14 7H13C11.3431 7 10 8.34315 10 10V12H9C8.44772 12 8 12.4477 8 13C8 13.5523 8.44771 14 9 14H10V20C10 20.5523 10.4477 21 11 21C11.5523 21 12 20.5523 12 20V14H14C14.5523 14 15 13.5523 15 13C15 12.4477 14.5523 12 14 12H12V10Z" fill="#777E91"/>
+                        </svg>
+                        </a>
+                    <a href="#" class="social__link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.18099 13.9998C1.52727 14.0045 0.459758 15.8884 1.47855 17.3157C2.93757 19.3596 5.58333 21 10.0003 21C16.8454 21 22.34 15.4217 21.5708 8.8311L22.6977 6.5773C23.4792 5.01428 22.1212 3.23622 20.4076 3.57894L18.9188 3.87669C18.5241 3.66843 18.1156 3.51127 17.7665 3.39741C17.0861 3.17552 16.2626 3 15.5003 3C14.131 3 12.9492 3.35131 12.01 4.05593C11.0815 4.75264 10.5585 5.66825 10.2715 6.50905C10.1392 6.89661 10.0511 7.28534 9.99462 7.65843C9.46335 7.49123 8.92164 7.26626 8.39129 6.99155C7.1881 6.36832 6.21514 5.57822 5.66629 4.88551C4.74546 3.7233 2.79402 3.80947 2.10924 5.32021C1.1441 7.44947 1.40885 9.97346 2.27639 12.0129C2.56717 12.6964 2.94542 13.3721 3.40753 13.9983C3.32842 13.9992 3.25274 13.9996 3.18099 13.9998ZM10.0002 19C6.13691 19 4.13923 17.6007 3.10628 16.1537C3.05987 16.0887 3.10667 16 3.18654 15.9998C4.23738 15.9968 6.39438 15.9471 7.81698 15.1145C7.89055 15.0714 7.87436 14.9629 7.79356 14.9358C4.47739 13.8208 2.59236 9.09859 3.93074 6.1459C3.96143 6.0782 4.05243 6.06927 4.0986 6.12754C5.62747 8.05718 8.97027 9.9472 11.8786 9.99891C11.9417 10 11.9894 9.9427 11.9798 9.88033C11.8626 9.12053 11.4151 5 15.5002 5C16.4757 5 17.9271 5.47583 18.4617 5.9633C18.4864 5.98583 18.5199 5.99606 18.5527 5.9895L20.7997 5.5401C20.8813 5.52378 20.946 5.60845 20.9088 5.68288L19.5151 8.47019C19.5054 8.48954 19.5024 8.51175 19.5061 8.53306C20.4822 14.02 15.9882 19 10.0002 19Z" fill="#777E91"/>
+                        </svg>
+                        </a>
+                    <a href="#" class="social__link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4ZM8 2C4.68629 2 2 4.68629 2 8V16C2 19.3137 4.68629 22 8 22H16C19.3137 22 22 19.3137 22 16V8C22 4.68629 19.3137 2 16 2H8Z" fill="#777E91"/>
+                        <path d="M17 8C17.5523 8 18 7.55228 18 7C18 6.44772 17.5523 6 17 6C16.4477 6 16 6.44772 16 7C16 7.55228 16.4477 8 17 8Z" fill="#777E91"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12ZM15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" fill="#777E91"/>
+                        </svg>
+                        </a>
+                    <a href="#" class="social__link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#777E91"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.8779 9.85385C8.29729 10.9183 8.27861 12.3212 8.89442 13.5528C9.1414 14.0468 8.94118 14.6474 8.4472 14.8944C7.95322 15.1414 7.35255 14.9412 7.10556 14.4472C6.22139 12.6788 6.20272 10.5817 7.12212 8.89615C8.06434 7.16875 9.92096 6 12.5 6C14.457 6 15.9423 6.88195 16.8692 8.16961C17.7746 9.42758 18.1239 11.0338 17.9538 12.5192C17.7836 14.0056 17.0762 15.4847 15.7299 16.3746C14.5809 17.134 13.1012 17.3769 11.3753 16.9852L10.4635 20.2676C10.3157 20.7998 9.76448 21.1113 9.23235 20.9635C8.70021 20.8157 8.38866 20.2645 8.53648 19.7324L9.71581 15.4868C9.71753 15.4804 9.71931 15.4739 9.72117 15.4675L11.0365 10.7324C11.1843 10.2002 11.7355 9.88867 12.2677 10.0365C12.7998 10.1843 13.1113 10.7355 12.9635 11.2676L11.9112 15.056C13.1622 15.3211 14.0396 15.0944 14.627 14.7061C15.37 14.215 15.8472 13.3358 15.9668 12.2917C16.0864 11.2467 15.8305 10.1502 15.2459 9.33801C14.6827 8.55555 13.7931 8 12.5 8C10.5791 8 9.43569 8.83125 8.8779 9.85385Z" fill="#777E91"/>
+                        </svg>
+                        </a>
+                </div>
+
+
         </div>
     </div>
 
