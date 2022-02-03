@@ -48,16 +48,16 @@ function CounDown() {
 		mm = String(today.getMonth() + 1).padStart(2, "0"),
 		yyyy = today.getFullYear(),
 		nextYear = yyyy + 1,
-		dayMonth = "05/30/",
-		birthday = dayMonth + yyyy;
+		dayMonth = "02/03/",
+		deadline = dayMonth + yyyy;
 	
 	today = mm + "/" + dd + "/" + yyyy;
-	if (today > birthday) {
-	  birthday = dayMonth + nextYear;
+	if (today > deadline) {
+		deadline = dayMonth + nextYear;
 	}
 	//end
 	
-	const countDown = new Date(birthday).getTime(),
+	const countDown = new Date(deadline).getTime(),
 		x = setInterval(function() {    
   
 		  const now = new Date().getTime(),
